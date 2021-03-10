@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
+
+/*--------------------------------------------Colors*/
+
+body {
+    background-color:lightblue;
+    margin: 0;
+    font-family: Roboto, sans-serif;
+    color:red;
+}
+
+.title {
+    text-align: center;
+    font-weight: normal;
+}
+
+
+/*------Audio*/
+
+#menu{
+    
+    list-style-type: none;
+    color:green;
+     text-align: left;
+    font-size: 1rem;
+    margin-left: 0px;
+}
+
+#menu li a {
+     color:green;
+}
+
+#menu li i {
+     color:red;
+}
+
+
+/*------Footer*/
+.footer-text {
+    text-align: center;
+    color:red;
+}

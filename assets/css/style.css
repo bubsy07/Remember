@@ -24,14 +24,32 @@ body {
      text-align: left;
     font-size: 1rem;
     margin-left: 0px;
+     
 }
 
 #menu li a {
      color:green;
+     
 }
 
 #menu li i {
      color:red;
+    
+}
+
+/*------Card Styling-*/
+.card {
+    position: relative;
+    margin-left: 60px;
+    float: left;
+    margin-bottom: 40px;
+}
+
+.card img {   
+    margin:2px;
+    height: 12rem;
+    width: 19rem;
+
 }
 
 
@@ -39,4 +57,41 @@ body {
 .footer-text {
     text-align: center;
     color:red;
+    bottom: 0px;
+}
+
+#nav-menu{
+    font-size: 100%;
+    list-style-type: none;
+    letter-spacing: 3px;
+}
+   
+#nav-menu li { 
+    margin-right: 8px;
+    color:red;
+}
+
+
+#nav-menu a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*------------------------------------------------------ Navbar */
+
+.navbar {
+    margin-bottom: 0;
+    width: 100%;
+    background-color: white;
+    border: 0;
+    position: fixed;
+    z-index:1;
+    padding: 5px;
+    margin-bottom: 10px;
+
+}
+
+.navbar .navbar-toggler {
+    border: 0;
+    margin-right: 10px;
 }

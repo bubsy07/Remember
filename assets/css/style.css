@@ -52,3 +52,51 @@ img {
 }
 
 
+
+/*------Overlay Styling-*/
+
+.overlay {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0, 0.5);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+.overlay-content {
+  position: relative;
+  top: 15%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  color: azure;
+  font-size: 300%;
+}
+
+/*------Mouse Cursor Styling-*/
+#start,
+#how-to-play,
+.btn-contact {
+    cursor: pointer;
+}
+
+.overlay-text-instructions div {
+    font-size: 100%;
+    text-align: center;
+}
+
+.overlay-text-instructions p {
+    font-size: 50%;
+    text-align: center;
+    color: lightgreen;
+}
+
+
+.overlay-text.visible {
+    display: flex;
+    flex-direction: column;
+    animation: on-load 500ms forwards;
+}

@@ -4,7 +4,7 @@
 
 body {
     background-color:lightblue;
-    margin: 0;
+    margin: 3px;
     font-family: Roboto, sans-serif;
     color:red;
 }
@@ -15,31 +15,33 @@ body {
 }
 
 /*----------game info-----------*/
-.container-game-info {
+.game-info {
  
     text-align: center;  
     margin-bottom: 5px;
     font-size: 125%;
-
 }
 
-/*------Card Styling-*/
-.card {
-    margin: 0px;
-    margin-bottom: 10px;
+/*------game area-*/
+.game-area {
+    height: 78vh;
+    max-width: 100%;
+    text-align: center; 
 }
 
-.card img {   
-    margin:2px;
-    height: 11rem;
-    width: 20rem;
+img {   
+    margin:5px;
     padding-left: 0px;
     padding-right: 0px;
-
+    width: 70%;
+    align-content: center;
 }
-.container-card-info{
-    padding: 0px;
-    border: 0px; 
+
+@media screen and (min-width:900px) {
+.game-area img {
+    
+    background-color: lightgreen;
+}
 }
 
 /*------Footer*/

@@ -11,19 +11,19 @@
 
 //turn links colour on hover
 
- $("#start").mouseenter(function() {
+ $("#start-game").mouseenter(function() {
         $(this).css('color', 'lightgreen');
    }); 
 
-$("#start").mouseleave(function() {
+$("#start-game").mouseleave(function() {
         $(this).css('color', 'azure');
    });
 
-$("#how-to-play").mouseenter(function() {
+$("#rules-of-game").mouseenter(function() {
         $(this).css('color', 'lightgreen');
    }); 
 
-$("#how-to-play").mouseleave(function() {
+$("#rules-of-game").mouseleave(function() {
         $(this).css('color', 'azure');
    });
 
@@ -31,13 +31,13 @@ $("#how-to-play").mouseleave(function() {
 //Starts the game when 'Click to Start' is clicked on landing overlay
         
 $(document).ready(function(){
-  $("#start").click(function(){
+  $("#start-game").click(function(){
     $("#front-page").hide();
   });
 });
 
    //Opens game instructions
-    $("#how-to-play").click(function () {
-        $("#instructions").slideToggle(1000);
+    $("#rules-of-game").click(function () {
+        $("#game-rules").slideToggle(1000);
         
     });

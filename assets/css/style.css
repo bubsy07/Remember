@@ -77,8 +77,8 @@ img {
 }
 
 /*------Mouse Cursor Styling-*/
-#start,
-#rules-to-play,
+#start-game,
+#rules-of-game,
 .btn-contact {
     cursor: pointer;
 }
@@ -91,7 +91,6 @@ img {
 .overlay-game-rules p {
     font-size: 50%;
     text-align: center;
-    color: lightgreen;
 }
 
 

@@ -40,19 +40,23 @@ $(document).ready(function(){
 //Starts the game when 'Click to Play Game' is clicked on front page
 $(document).ready(function(){
   
-    $("#start-game").click(function(){
-    $("#front-page").hide();
-    game.startGame;
-   
+    $("#start-game").click(startGame);
+    
   });
-});
+
+
+
 
    //Starts the timer when game is started 
 
     function startGame() {
+        console.log("starting game")
     var fiveMinutes = 60 * 5,
         display = document.querySelector('#time');
     startTimer(fiveMinutes, display);
+
+
+    $("#front-page").hide();
 };
 
    function startTimer(duration, display) {

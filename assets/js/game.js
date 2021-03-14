@@ -37,6 +37,10 @@ $(document).ready(function(){
     });
 });
 
+
+
+
+
 //Starts the game when 'Click to Play Game' is clicked on front page
 $(document).ready(function(){
   
@@ -46,41 +50,40 @@ $(document).ready(function(){
 
 
 
-
    //Starts the timer when game is started 
 
     function startGame() {
         console.log("starting game")
-    var fiveMinutes = 60 * 5,
+    var fiveMinutes = 60 * 1,
         display = document.querySelector('#time');
     startTimer(fiveMinutes, display);
-
 
     $("#front-page").hide();
 };
 
    function startTimer(duration, display) {
-    var timer = duration, minutes, seconds;
+    var timer = duration, seconds;
     setInterval(function () {
-        minutes = parseInt(timer / 60, 10)
+        
         seconds = parseInt(timer % 60, 10);
 
-        minutes = minutes < 10 ? "0" + minutes : minutes;
+        
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
-        display.textContent = minutes + ":" + seconds;
-
-        if (--timer < 0) {
-            timer = duration;
+        display.textContent = seconds;
+        
+        if (--timer === 0) {
+            this.gameOver();
         }
     }, 1000);
 }
 
+  //Game Over Function called when you lose
+    function gameOver() {
+        clearInterval(startTimer);
+    
+        document.getElementById("game-over").style.display = "block";
+}
+    
 
-
-
-
-   
-
-  
  

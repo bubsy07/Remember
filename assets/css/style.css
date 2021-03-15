@@ -1,4 +1,16 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+
+
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Oswald|Lato:300');
+
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Lato&display=swap');
 
 /*--------------------------------------------Colors*/
 
@@ -7,6 +19,7 @@ body {
     margin: 3px;
     font-family: Roboto, sans-serif;
     color:red;
+    font-family: "Architects Daughter";
 }
 
 .title {
@@ -106,3 +119,17 @@ img {
     display: none;
 }
 
+.game-overlay-settings {
+ position: relative;
+  top: 30%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  color: azure;
+  font-size: 300%;
+
+}
+.game-overlay-settings h2 {
+  color: red;
+  font-size: 200%;
+}

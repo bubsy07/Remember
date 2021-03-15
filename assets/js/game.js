@@ -26,6 +26,14 @@ $("#rules-of-game").mouseenter(function() {
 $("#rules-of-game").mouseleave(function() {
         $(this).css('color', 'azure');
    });
+$("#game-over-restart").mouseenter(function() {
+        $(this).css('color', 'lightgreen');
+   }); 
+
+$("#game-over-restart").mouseleave(function() {
+        $(this).css('color', 'azure');
+   });
+
 
   
 //Opens game instructions on front page
@@ -37,9 +45,6 @@ $(document).ready(function(){
 });
 
 
-
-
-
 //Starts the game when 'Click to Play Game' is clicked on front page
 $(document).ready(function(){
   
@@ -48,12 +53,11 @@ $(document).ready(function(){
   });
 
 
-
-   //Starts the timer when game is started 
+   //Starts the timer when game is started - hide front page
 
     function startGame() {
         console.log("starting game")
-    var fiveMinutes = 60 * 1,
+    var fiveMinutes = 10 * 1,
         display = document.querySelector('#time');
     startTimer(fiveMinutes, display);
 
@@ -70,26 +74,28 @@ $(document).ready(function(){
       
     display.textContent = counter;
     if (counter === 0 ) {
-      clearInterval(interval);
-      console.log('Ding!');
-    
+      clearInterval(interval);    
       gameOver();
     }
   }, 1000);
 }
 
+//Game Over Function called when you timer expires
+//add the overlay to the game-over-page in line 81. But we set the CSS of game-over-page to display: none, 
+//so they will not show unless we set the display back:
 
-  //Game Over Function called when you lose
     function gameOver() {
         let el =  document.getElementById("game-over-page")    
         el.classList.add("overlay");
-        el.style.display = "initial";
-    //   return  el      
+        el.style.display = "initial";     
 }
-    
+   
+//Game restart Function - hide game end over lay - start game
+
  $("#game-over-restart").click(function() {
 $("#game-over-page").hide();
 startGame();
 });
+
 
  

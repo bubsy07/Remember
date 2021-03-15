@@ -28,8 +28,6 @@
     <div id="front-page" class="overlay">
         <div class="overlay-info">
           
-      
-
         <!-- Game Instructions-->
             <div class="overlay-game-rules">
             <h1>Welcome to Remember - Hope You Enjoy</h1>
@@ -43,41 +41,26 @@
         <!-- Start The Game-->
                     <div id="start-game">Click to Play Game  <i class="far fa-play-circle" aria-hidden="true"></i>
                     </div>
-
-
                  </div>     
-
             </div>
         </div>
     </div>
-
-
    
  <!-- Game Area -->
  <section class="container-fluid">
      <div class="row">
-        <div class="col-sm-2 game-info">
-                Game Ends in: <span id="time"> 500</span>
-                
-        </div>
-
-        <div class="col-sm-2 game-info">
-                Restart Game  <i class="far fa-play-circle" aria-hidden="true"></i>
-        </div>  
-
         <div class="col-sm-4 game-info">
-                <audio src="assets/melody/audio_c2fcb3b211.mp3" id="song1" controls autoplay muted=""></audio>
-                
+                Game Ends in: <span id="time"> 500</span>      
         </div>
-
-        <div class="col-sm-2 game-info">
+        
+        <div class="col-sm-4 game-info">
+                <audio src="assets/melody/audio_c2fcb3b211.mp3" id="song1" controls autoplay muted=""></audio>     
+        </div>
+        <div class="col-sm-4 game-info">
                 Correct Score: <span id="score">0</span>
         </div>
-        <div class="col-sm-2 game-info">
-                Contact <i class="far fa-comment-dots" aria-hidden="true"></i>
-        </div>
+        
      </div>   
-
 </section> 
 
 <!-- Game Cards -->
@@ -138,8 +121,12 @@
 
  <!-- Game Over Text -->
     <div id="game-over-page" class="overlay-text">
-        Game Over
-        <span id="game-over-restart" class="overlay-text-small">Click to Restart Game</span><i class="far fa-play-circle" aria-hidden="true"></i>
+        <div class="game-overlay-settings">
+        <h2>Game Over</h2>
+        </div>
+        <div id="game-over-restart" class="game-overlay-settings">
+         Click to Restart Game  <i class="far fa-play-circle" aria-hidden="true"></i>
+        </div> 
     </div>
 
 
@@ -150,8 +137,8 @@
 
 <footer class="footer-text">
         <div>  
-                Created by iC Automation
-         </div>
+                Created by iC Automation 
+        </div>
 </footer>
 
 </body>

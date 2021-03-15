@@ -61,22 +61,22 @@ $(document).ready(function(){
     $("#front-page").hide();
 };
 
-   function startTimer(duration, display) {
-    var timer = duration, seconds;
-    setInterval(function () {
-        
-        seconds = parseInt(timer % 60, 10);
-
-        
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-
-        display.textContent = seconds;
-        
-        if (--timer === 0) {
-            this.gameOver();
-        }
-    }, 1000);
+   function startTimer(duration, display)  {
+  let counter = duration;
+    
+  const interval = setInterval(() => {
+    console.log(counter);
+    counter--;
+      
+    display.textContent = counter;
+    if (counter === 0 ) {
+      clearInterval(interval);
+      console.log('Ding!');
+      this.gameOver();
+    }
+  }, 1000);
 }
+
 
   //Game Over Function called when you lose
     function gameOver() {

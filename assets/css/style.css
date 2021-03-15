@@ -65,6 +65,7 @@ img {
   background-color: rgba(0,0,0, 0.5);
   overflow-x: hidden;
   transition: 0.5s;
+  
 }
 .overlay-info {
   position: relative;
@@ -79,6 +80,7 @@ img {
 /*------Mouse Cursor Styling-*/
 #start-game,
 #rules-of-game,
+#game-over-restart
 .btn-contact {
     cursor: pointer;
 }
@@ -99,3 +101,8 @@ img {
     flex-direction: column;
     animation: on-load 500ms forwards;
 }
+
+.overlay-text {
+    display: none;
+}
+

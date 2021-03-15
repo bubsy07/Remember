@@ -32,8 +32,7 @@ $("#rules-of-game").mouseleave(function() {
 $(document).ready(function(){
     $("#game-rules").hide();    
     $("#rules-of-game").click(function () {
-    $("#game-rules").slideToggle(1000);
-        
+    $("#game-rules").slideToggle(1000);        
     });
 });
 
@@ -59,6 +58,7 @@ $(document).ready(function(){
     startTimer(fiveMinutes, display);
 
     $("#front-page").hide();
+    
 };
 
    function startTimer(duration, display)  {
@@ -72,7 +72,8 @@ $(document).ready(function(){
     if (counter === 0 ) {
       clearInterval(interval);
       console.log('Ding!');
-      this.gameOver();
+    
+      gameOver();
     }
   }, 1000);
 }
@@ -80,10 +81,15 @@ $(document).ready(function(){
 
   //Game Over Function called when you lose
     function gameOver() {
-        clearInterval(startTimer);
-    
-        document.getElementById("game-over").style.display = "block";
+        let el =  document.getElementById("game-over-page")    
+        el.classList.add("overlay");
+        el.style.display = "initial";
+    //   return  el      
 }
     
+ $("#game-over-restart").click(function() {
+$("#game-over-page").hide();
+startGame();
+});
 
  

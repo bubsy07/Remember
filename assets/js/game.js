@@ -100,12 +100,6 @@ startGame();
 
  //Game Function - image click - box color
 
-function imgClicked() {
-console.log(this)
-$(this).classList.toggle("newClassName");
-   console.log("clicked")
-}
-
 let box = document.getElementsByClassName('box');
 
 let l = box.length;
@@ -114,4 +108,9 @@ for(let i = 0;  i < l; i++) {
 }
 
 
+function imgClicked() {
 
+console.log(this)
+this.classList.add("newClassName");
+   console.log("clicked")
+}

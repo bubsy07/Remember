@@ -134,12 +134,12 @@ img {
   font-size: 200%;
 }
 
-box {   
-    margin:5px;
-    padding-left: 0px;
-    padding-right: 0px;
-    width: 70%;
-    align-content: center;
-    z-index: 1;
-    background-color: rgba(0,0,0,0.5);
+.newClassName {
+  width: 400px;
+  height: 100px;
+  background-color: lightblue;
+  text-align: center;
+  font-size: 25px;
+  color: navy;
+  margin-bottom: 10px;
 }

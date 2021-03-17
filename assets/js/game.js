@@ -100,16 +100,18 @@ startGame();
 
  //Game Function - image click - box color
 
-
 function imgClicked() {
-    
-  document.getElementById("overlay").style.display = "block";
+console.log(this)
+$(this).classList.toggle("newClassName");
+   console.log("clicked")
 }
-
-
 
 let box = document.getElementsByClassName('box');
-for(let i = 0, l = box.length; i < l; i++) {
+
+let l = box.length;
+for(let i = 0;  i < l; i++) {
     box[i].addEventListener('click', imgClicked);
 }
+
+
 

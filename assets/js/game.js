@@ -57,7 +57,7 @@ $(document).ready(function(){
 
     function startGame() {
         console.log("starting game")
-    var fiveMinutes = 10 * 1,
+    var fiveMinutes = 60 * 1,
         display = document.querySelector('#time');
     startTimer(fiveMinutes, display);
 
@@ -98,4 +98,18 @@ startGame();
 });
 
 
- 
+ //Game Function - image click - box color
+
+
+function imgClicked() {
+    
+  document.getElementById("overlay").style.display = "block";
+}
+
+
+
+let box = document.getElementsByClassName('box');
+for(let i = 0, l = box.length; i < l; i++) {
+    box[i].addEventListener('click', imgClicked);
+}
+

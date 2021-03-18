@@ -88,6 +88,7 @@ function gameOver() {
     let el = document.getElementById("game-over-page")
     el.classList.add("overlay");
     el.style.display = "initial";
+    
 }
 
 //Game restart Function - hide game end over lay - start game
@@ -110,7 +111,8 @@ for (let i = 0; i < l; i++) {
 function imgClicked() {
     console.log(this)
     console.log(this.parentElement)
-    $(this).parentElement().addClass("layer");
+    
+this.src="assets/images/greentick.png";
 
 
 

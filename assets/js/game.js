@@ -109,8 +109,12 @@ for(let i = 0;  i < l; i++) {
 
 
 function imgClicked() {
+$(this).children.classList.add("layer");
+
+
+
 
 console.log(this)
-this.classList.add("newClassName");
+
    console.log("clicked")
 }

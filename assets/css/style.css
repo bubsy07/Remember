@@ -6,7 +6,6 @@
 */
 
 
-
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
 @import url('https://fonts.googleapis.com/css?family=Oswald|Lato:300');
 
@@ -42,13 +41,7 @@ body {
     text-align: center; 
 }
 
-img {   
-    margin:5px;
-    padding-left: 0px;
-    padding-right: 0px;
-    width: 70%;
-    align-content: center;
-}
+
 
 @media screen and (min-width:900px) {
 .game-area img {
@@ -63,7 +56,6 @@ img {
     color:red;
     bottom: 0px;
 }
-
 
 
 /*------Overlay Styling-*/
@@ -107,7 +99,6 @@ img {
     font-size: 50%;
     text-align: center;
 }
-
 
 .overlay-text.visible {
     display: flex;
@@ -155,3 +146,22 @@ z-index: 2;
     align-content: center;
     z-index: 1;
 }
+
+
+/*------Game Container Styling-*/
+.game-grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 1.5rem;
+    justify-content: center;
+    margin: 1.3rem;
+    perspective: 35rem;
+}
+
+.image-size {
+    height: 10rem;
+    width: auto;
+}
+
+
+

@@ -6,7 +6,6 @@ window.addEventListener("DOMContentLoaded", event => {
 });
 
 
-
 //Overlay page
 
 //turn links colour on hover
@@ -35,7 +34,6 @@ $("#game-over-restart").mouseleave(function () {
 });
 
 
-
 //Opens game instructions on front page
 $(document).ready(function () {
     $("#game-rules").hide();
@@ -45,13 +43,13 @@ $(document).ready(function () {
 });
 
 
+
 //Starts the game when 'Click to Play Game' is clicked on front page
 $(document).ready(function () {
 
     $("#start-game").click(startGame);
 
 });
-
 
 //Starts the timer when game is started - hide front page
 
@@ -62,6 +60,7 @@ function startGame() {
     startTimer(fiveMinutes, display);
 
     $("#front-page").hide();
+    shuffleCards(cardArray);
 
 };
 
@@ -98,7 +97,6 @@ $("#game-over-restart").click(function () {
     startGame();
 });
 
-
 //Game Function - image click - box color
 
 let box = document.getElementsByClassName('box');
@@ -115,8 +113,52 @@ function imgClicked() {
 this.src="assets/images/greentick.png";
 
 
-
     console.log()
 
     console.log("clicked")
 }
+
+
+//Create Array from all elements with the 'picture' class
+    let cardArray = Array.from(document.getElementsByClassName('picture'));
+    console.log(cardArray)
+    
+    //Card shuffling algorithm based on Fisher-Yates shuffle
+
+    
+     function shuffleCards(cardArray){
+  var m = cardArray.length, t, i;
+console.log(m)
+  // While there remain elements to shuffle…
+  while (m) {
+
+    // Pick a remaining element…
+    i = Math.floor(Math.random() * m--);
+console.log(i)
+    // And swap it with the current element.
+    t = cardArray[m];
+    cardArray[m] = cardArray[i];
+    cardArray[i] = t;
+    console.log(cardArray)
+  }
+
+  return cardArray;
+}
+
+
+
+    
+
+    
+
+    
+   
+
+    
+
+    
+    
+   
+    
+    
+

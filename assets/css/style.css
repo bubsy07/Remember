@@ -159,9 +159,24 @@ z-index: 2;
 }
 
 .image-size {
-    height: 10rem;
+    min-height: 10rem;
     width: auto;
 }
 
+.newClass{
 
+    background-image: url('../images/greentick.png');
+    z-index: 1;
 
+}
+
+.text{
+text-align: center;
+ color: green;
+ visibility: hidden;
+}
+
+.card {
+     background-color: lightblue;
+     border: none;
+}

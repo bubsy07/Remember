@@ -61,6 +61,9 @@ function startGame() {
 
     $("#front-page").hide();
     shuffleCards(cardArray);
+   
+    document.getElementsByClassName('text').style.visibility = "hidden"
+    
 
 };
 
@@ -88,6 +91,7 @@ function gameOver() {
     el.classList.add("overlay");
     el.style.display = "initial";
     
+    
 }
 
 //Game restart Function - hide game end over lay - start game
@@ -97,7 +101,8 @@ $("#game-over-restart").click(function () {
     startGame();
 });
 
-//Game Function - image click - box color
+
+//Game Function - image click - box
 
 let box = document.getElementsByClassName('box');
 
@@ -109,56 +114,29 @@ for (let i = 0; i < l; i++) {
 function imgClicked() {
     console.log(this)
     console.log(this.parentElement)
-    
-this.src="assets/images/greentick.png";
 
 
-    console.log()
+ this.nextElementSibling.style.visibility = "visible"
 
+    console.log(this.nextElementSibling)
     console.log("clicked")
 }
 
 
 //Create Array from all elements with the 'picture' class
-    let cardArray = Array.from(document.getElementsByClassName('picture'));
+    let cardArray = Array.from(document.getElementsByClassName('card'));
     console.log(cardArray)
     
-    //Card shuffling algorithm based on Fisher-Yates shuffle
+   //Card shuffling algorithm based on Fisher-Yates shuffle
+    function shuffleCards(cardArray) {
+        for (let i = cardArray.length - 1; i > 0; i--) {
+            let randIndex = Math.floor(Math.random() * (i + 1));
+            cardArray[randIndex].style.order = i;
+            cardArray[i].style.order = randIndex;
 
+            }
+    }    
+
+
+ 
     
-     function shuffleCards(cardArray){
-  var m = cardArray.length, t, i;
-console.log(m)
-  // While there remain elements to shuffle…
-  while (m) {
-
-    // Pick a remaining element…
-    i = Math.floor(Math.random() * m--);
-console.log(i)
-    // And swap it with the current element.
-    t = cardArray[m];
-    cardArray[m] = cardArray[i];
-    cardArray[i] = t;
-    console.log(cardArray)
-  }
-
-  return cardArray;
-}
-
-
-
-    
-
-    
-
-    
-   
-
-    
-
-    
-    
-   
-    
-    
-

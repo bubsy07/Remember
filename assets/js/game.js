@@ -62,7 +62,8 @@ function startGame() {
     $("#front-page").hide();
     shuffleCards(cardArray);
    
-    document.getElementsByClassName('text').style.visibility = "hidden"
+    trial = document.getElementsByClassName('text');
+    trial.style.visibility = "hidden"
     
 
 };

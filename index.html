@@ -19,168 +19,167 @@
 </head>
 <body>
     
-<!-- Page Title -->
-    <h1 class="title"> Remember </h1>
-
-<!-- Game Overlay front pafe -->
-    <div id="front-page" class="overlay">
-        <div class="overlay-info">
-          
-        <!-- Game Instructions-->
-            <div class="overlay-game-rules">
-            <h1>Welcome to Remember - Hope You Enjoy</h1>
-                <div id="rules-of-game">How to Play  <i class="fas fa-book-open"></i>
-                </div>
-            
-                <div id="game-rules">
-                <p>Click on the cards to match the animals!<br>Can you find all matches before the time expires?</p>
-                <p>Turn on the music for some relaxation while you play the game</p>
-
-        <!-- Start The Game-->
-                    <div id="start-game">Click to Play Game  <i class="far fa-play-circle" aria-hidden="true"></i>
-                    </div>
-                 </div>     
-            </div>
-        </div>
-    </div>
+<!-- front page                                             -->
    
-   <!-- Game Area -->
- <section class="container-fluid">
-     <div class="row">
-        <div class="col-sm-4 game-info">
-                Game Ends in: <span id="time"> 500</span>      
-        </div>
-        
-        <div class="col-sm-4 game-info">
+    <div id="front-page" class="overlay-info visible scroll">
+        <div id="front-page-text">
+        <h1>Welcome to Remember - Hope You Enjoy</h1>
+           
+            <div id="rules-of-game">How to Play  <i class="fas fa-book-open"></i></div>
+            <div id="what-to-do">
+               <p>Click on the cards to match the animals!<br>Can you find all matches before the time expires?</p>
+                <p>Turn on the music for some relaxation while you play the game</p>   
+                
+                <div id="start-game">Click to Play Game  <i class="far fa-play-circle" aria-hidden="true"></i>
+                </div>  
+        </div>   
+    </div> 
+    </div>
+
+<!-- Game Area -->
+ <h1 class="game-title"> Remember </h1>
+    <div class="grid-container">
+        <div class="game-info-container">
+            <div class="game-area">
+                Game Ends in: <span id="time-remaining">100</span>
+            </div>
+            <div class="game-area">
                 <audio src="assets/melody/audio_c2fcb3b211.mp3" id="song1" controls autoplay muted=""></audio>     
         </div>
-        <div class="col-sm-4 game-info">
-                Correct Score: <span id="score">0</span>
-        </div>
-        
-     </div>   
-</section> 
 
- 
-
-
-
-<!-- Game Cards -->
- <div class="game-grid-container">
-        
-            <div class="card">
-                <img src="assets/images/dog.png" alt="dog" class="image-size box centered">
-            
-             <div class="text">
-            <h4>OK</h4>
-            </div>
-            </div>
-
-
-            <div class="card">
-                <img src="assets/images/dolphin.jpg" alt="dolphin" class="image-size box">
-            <div class="text">
-            <h4>OK</h4>
-            </div>
-            </div>
-
-            <div class="card">
-                <img src="assets/images/kittens.png" alt="kittens" class="image-size box">
-             <div class="text">
-            <h4>OK</h4>
-            </div>
-            </div>
-
-            <div class="card">
-                <img src="assets/images/rabbit.png" alt="rabbit" class="image-size box">
-             <div class="text">
-            <h4>OK</h4>
-            </div>
-            </div>
-        
-            <div class="card">
-                <img src="assets/images/tiger.png" alt="Tiger" class="image-size box">
-             <div class="text">
-            <h4>OK</h4>
-            </div>
-            </div>
-
-            <div class="card">
-                <img src="assets/images/zebra.png" alt="zebra" class="image-size box">
-             <div class="text">
-            <h4>OK</h4>
-            </div>
-            </div>
-
-             <div class="card">
-                <img src="assets/images/dog.png" alt="dog" class="image-size box">
-             <div class="text">
-            <h4>OK</h4>
-            </div>
-            </div>
-        
-            <div class="card">
-                <img src="assets/images/dolphin.jpg" alt="dolphin" class="image-size box">
-             <div class="text">
-            <h4>OK</h4>
-            </div>
-            </div>
-
-            <div class="card">
-                <img src="assets/images/kittens.png" alt="kittens" class="image-size box">
-             <div class="text">
-            <h4>OK</h4>
-            </div>
-            </div>
-
-            <div class="card">
-                <img src="assets/images/rabbit.png" alt="rabbit" class="image-size box">
-             <div class="text">
-            <h4>OK</h4>
-            </div>
-            </div>
-        
-            <div class="card">
-                <img src="assets/images/tiger.png" alt="Tiger" class="image-size box">
-             <div class="text">
-            <h4>OK</h4>
-            </div>
-            </div>
-
-            <div class="card">
-                <img src="assets/images/zebra.png" alt="zebra" class="image-size box">
-             <div class="text">
-            <h4>OK</h4>
-            </div>
-            </div>       
-      
-</div>   
-
- <!-- Game Over Text -->
-    <div id="game-over-page" class="overlay-text">
-        <div class="game-overlay-settings">
-        <h2>Game Over</h2>
-        </div>
-        <div id="game-over-restart" class="game-overlay-settings">
-         Click to Restart Game  <i class="far fa-play-circle" aria-hidden="true"></i>
-        </div> 
+            <div class="game-area">
+                <div class="score">Correct Score: <span id="game-score">0</span></div>
+            </div>     
     </div>
 
-
-
-
-<!-- Footer -->
-
-<footer class="footer-text">
-        <div>  
-                Created by iC Automation 
+<!-- Game Cards -->
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="assets/images/daffodil.png" alt="daffodil" class="daff-img">
+            </div>
+            <div class="card-front card-face">
+                <img src="assets/images/dog.png" alt="dog" class="animal-img">   
+            </div>
         </div>
-</footer>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="assets/images/daffodil.png" alt="daffodil" class="daff-img">
+            </div>
+            <div class="card-front card-face">
+                <img src="assets/images/dolphin.jpg" alt="dolphin" class="animal-img">    
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="assets/images/daffodil.png" alt="daffodil" class="daff-img">
+            </div>
+            <div class="card-front card-face">
+                <img src="assets/images/kittens.png" alt="kittens" class="animal-img">     
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="assets/images/daffodil.png" alt="daffodil" class="daff-img">
+            </div>
+            <div class="card-front card-face">
+                <img src="assets/images/rabbit.png" alt="rabbit" class="animal-img">    
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="assets/images/daffodil.png" alt="daffodil" class="daff-img">
+            </div>
+            <div class="card-front card-face">
+                <img src="assets/images/tiger.png" alt="tiger" class="animal-img">   
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="assets/images/daffodil.png" alt="daffodil" class="daff-img">
+            </div>
+            <div class="card-front card-face">
+                <img src="assets/images/zebra.png" alt="zebra" class="animal-img">  
+            </div>
+        </div>
+            <div class="card">
+            <div class="card-back card-face">
+                <img src="assets/images/daffodil.png" alt="daffodil" class="daff-img">
+            </div>
+            <div class="card-front card-face">
+                <img src="assets/images/dog.png" alt="dog" class="animal-img">   
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="assets/images/daffodil.png" alt="daffodil" class="daff-img">
+            </div>
+            <div class="card-front card-face">
+                <img src="assets/images/dolphin.jpg" alt="dolphin" class="animal-img">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="assets/images/daffodil.png" alt="daffodil" class="daff-img">
+            </div>
+            <div class="card-front card-face">
+                <img src="assets/images/kittens.png" alt="kittens" class="animal-img">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="assets/images/daffodil.png" alt="daffodil" class="daff-img">
+            </div>
+            <div class="card-front card-face">
+                <img src="assets/images/rabbit.png" alt="rabbit" class="animal-img"> 
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="assets/images/daffodil.png" alt="daffodil" class="daff-img">
+            </div>
+            <div class="card-front card-face">
+                <img src="assets/images/tiger.png" alt="tiger" class="animal-img">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="assets/images/daffodil.png" alt="daffodil" class="daff-img">
+            </div>
+            <div class="card-front card-face">
+                <img src="assets/images/zebra.png" alt="zebra" class="animal-img">  
+            </div>
+        </div>        
+    </div>
 
+<!-- beat the game before the timer                                     -->
+    <div id="win" class="overlay-info">
+        <h1><i class="far fa-handshake"></i> Congratulations  <i class="far fa-handshake"></i></h1>
+        <p>100 %</p>
+        <p>You Beat The Game</p>
+        
+        <div id="win-home"> 
+        <p>Click to Go to Back To Home Screen <i class="fas fa-home"></i></p>
+        </div>
+    </div>
+
+<!-- Game timed out finished page                                       -->
+
+    <div id="game-finished" class="overlay-info">
+        <h1>The Game is Now Over</h1>
+        <div id="back-to-home" >
+        <p>Click to Go to Back To Home Screen <i class="fas fa-home"></i></p>
+        </div>    
+    </div>
+
+<!-- Footer                                                   -->
+    <footer class="footer-text">
+        Created by iC Automation 
+    </footer>
+
+<!-- Scripts                                                  -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    
+    <script src="assets/js/game.js"></script>
 </body>
 
-<!-- Scripts -->
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script src="assets/js/email.js"></script>
-<script src="assets/js/game.js"></script>
 </html>

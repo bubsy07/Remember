@@ -6,177 +6,143 @@
 */
 
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
 @import url('https://fonts.googleapis.com/css?family=Oswald|Lato:300');
 
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Lato&display=swap');
 
-/*--------------------------------------------Colors*/
-
 body {
-    background-color:lightblue;
+   background-color:lightblue;
     margin: 3px;
-    font-family: Roboto, sans-serif;
     color:red;
     font-family: "Architects Daughter";
 }
 
-.title {
-    text-align: center;
-    font-weight: normal;
-}
-
-/*----------game info-----------*/
-.game-info {
- 
-    text-align: center;  
-    margin-bottom: 5px;
-    font-size: 125%;
-}
-
-/*------game area-*/
-.game-area {
-    height: 78vh;
-    max-width: 100%;
-    text-align: center; 
-}
-
-
-
-@media screen and (min-width:900px) {
-.game-area img {
-    
-    background-color: lightgreen;
-}
-}
-
-/*------Footer*/
-.footer-text {
-    text-align: center;
-    color:red;
-    bottom: 0px;
-}
-
-
-/*------Overlay Styling-*/
-
-.overlay {
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: rgba(0,0,0, 0.5);
-  overflow-x: hidden;
-  transition: 0.5s;
-  
-}
-.overlay-info {
-  position: relative;
-  top: 15%;
-  width: 100%;
-  text-align: center;
-  margin-top: 30px;
-  color: azure;
-  font-size: 300%;
-}
-
-/*------Mouse Cursor Styling-*/
+/*------Mouse Styling-*/
 #start-game,
 #rules-of-game,
-#game-over-restart
+#win-home,
 .btn-contact {
     cursor: pointer;
 }
 
-.overlay-game-rules div {
-    font-size: 100%;
+/*------Title Text Styling-*/
+.game-title {
+    text-align: center;
+    font-weight: normal;
+    font-size: 4rem;
+}
+.game-area {
+    font-size: 2rem;
+}
+
+.score {
     text-align: center;
 }
 
-.overlay-game-rules p {
-    font-size: 50%;
-    text-align: center;
-}
-
-.overlay-text.visible {
+/*------Game display-*/
+.game-info-container {
+    grid-column: 1 / -1;
     display: flex;
-    flex-direction: column;
-    animation: on-load 500ms forwards;
+    justify-content: space-between;
 }
 
-.overlay-text {
-    display: none;
-}
-
-.game-overlay-settings {
- position: relative;
-  top: 30%;
-  width: 100%;
-  text-align: center;
-  margin-top: 30px;
-  color: azure;
-  font-size: 300%;
-
-}
-.game-overlay-settings h2 {
-  color: red;
-  font-size: 200%;
-}
-
-.newClassName {
-  
-background-color: rgba(0,0,0, 0.1);
-margin-bottom: 10px;
-margin:5px;
-padding-left: 0px;
-padding-right: 0px;
-width: 70%;
-align-content: center;
-z-index: 2;
-}
-
-.layer {
-    background-color: rgba(248, 247, 216, 0.7);
-    margin:5px;
-    padding-left: 0px;
-    padding-right: 0px;
-    width: 70%;
-    align-content: center;
-    z-index: 1;
-}
-
-
-/*------Game Container Styling-*/
-.game-grid-container {
+/*------Grid displa --*/
+.grid-container {
     display: grid;
     grid-template-columns: repeat(4, auto);
-    grid-gap: 1.5rem;
+    grid-gap: 2.5rem;
     justify-content: center;
     margin: 1.3rem;
-    perspective: 35rem;
+    perspective: 10rem;
 }
 
-.image-size {
-    min-height: 10rem;
-    width: auto;
-}
 
-.newClass{
-
-    background-image: url('../images/greentick.png');
+/*------Overlay Styling-*/
+.overlay-info {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    align-items: center;
     z-index: 1;
-
+    color: azure;
 }
 
-.text{
-text-align: center;
- color: green;
- visibility: hidden;
+#front-page-text{
+    position: relative;
+    top: 150px;
 }
 
-.card {
-     background-color: lightblue;
-     border: none;
+h1{
+    font-size: 350%;
+   position: relative;  
 }
+
+.overlay-info.visible {
+    display: flex;
+    flex-direction: column;
+    animation: on-load 100ms forwards;
+}
+
+#rules-of-game{
+    position: relative;
+    text-align: center;
+    font-size: 3rem;
+    top: 50px;
+}
+
+#what-to-do {
+    position: relative;
+    display: none;
+    text-align: center;
+    font-size: 1.625rem;
+    top: 50px;
+}
+
+#start-game {
+    
+    text-align: center;
+    font-size: 3rem;
+}
+
+#game-finished h1 {
+    position: relative;
+    text-align: center;
+    font-size: 3rem;
+     top: 200px;
+     color: red;
+}
+
+#game-finished p {
+    position: relative;
+    text-align: center;
+    font-size: 3rem;
+    top: 250px;
+}
+
+#win h1 {
+    position: relative;
+    text-align: center;
+    font-size: 5rem;
+     top: 150px;
+     color:orange;
+}
+
+#win P {
+    position: relative;
+    text-align: center;
+    font-size: 3rem;
+     top: 200px;
+     
+}
+
+#win-home p {
+    position: relative;
+    text-align: center;
+    font-size: 3rem;
+    top: 250px;
+}
+
+

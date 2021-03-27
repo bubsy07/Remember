@@ -22,6 +22,7 @@ body {
 #start-game,
 #rules-of-game,
 #win-home,
+
 .btn-contact {
     cursor: pointer;
 }
@@ -39,7 +40,6 @@ body {
 .score {
     text-align: center;
 }
-
 
 /*------Game display-*/
 .game-info-container {
@@ -74,11 +74,11 @@ body {
 
 #front-page-text{
     position: relative;
-    top: 150px;
+    top: 130px;
 }
 
 h1{
-    font-size: 350%;
+    font-size: 300%;
    position: relative;  
 }
 
@@ -148,25 +148,6 @@ h1{
 }
 
 
-/*-----Contact Form -*/
-
-#contact{
-    position: relative;
-    text-align: center;
-    font-size: 3rem;
-    top: 20px;
-}
-
-#contact-form {
-    position: relative;
-    display: none;
-    text-align: center;
-    font-size: 1.625rem;
-    top: 20px;
-}
-
-
-
 /*------Card Styling-*/
 .card {
     position: relative;
@@ -183,6 +164,18 @@ h1{
     width: 15rem;
     border-radius: 0.5rem;
      border: 0.125rem solid #000;
+}
+
+.card-front {
+    transform: rotateY(180deg);
+}
+
+.card.visible .card-back {
+    transform: rotateY(-180deg);
+}
+
+.card.visible .card-front {
+    transform: rotateY(0);
 }
 
 .card-face {
@@ -202,4 +195,60 @@ h1{
     width: 15rem;
     border-radius: 0.5rem;
      border: 0.125rem solid #000;
+}
+
+.card.matched .card-front {
+    animation: match 1500ms forwards;
+}
+
+/*------Footer Styling-*/
+.footer-text {
+    text-align: center;
+    color:red;
+    bottom: 0px;
+}
+
+/*-----Contact Form -*/
+
+#contact{
+    position: relative;
+    text-align: center;
+    font-size: 3rem;
+    top: 10px;
+}
+
+#contact-form {
+    position: relative;
+    display: none;
+    text-align: center;
+    font-size: 1.625rem;
+    top: 20px;
+}
+
+/*-----Contact Form Response Messages-*/
+#mail-ok,
+#mail-nok {
+    display: none;
+}
+
+#mail-ok.visible,
+#mail-nok.visible {
+    display: flex;
+    text-align: center;
+    font-size: 1.625rem;
+}
+
+
+
+
+
+
+/*------Overlay Animation-*/
+@keyframes on-load {
+    from {
+        background-color: rgba(0, 0, 0, 0);   
+    }
+    to {
+        background-color: rgba(0, 0, 0, .7);   
+    }
 }

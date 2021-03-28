@@ -55,7 +55,7 @@ $(document).ready(function () {
     let cards = Array.from(document.getElementsByClassName('card'));
 
     //time/card array
-    let play = new remember(cards, 60);
+    let play = new remember(cards, 10);
 
     //Start on front page
 
@@ -89,4 +89,66 @@ $('#start-game').click(function () {
         });
     });
 });
+ //add constructor to handle the game https://www.w3schools.com/js/js_object_constructors.asp
+class remember {
 
+    //Game content
+    constructor(cards, GameTime) {
+        this.GameTime = GameTime;
+        this.timeToGo = GameTime;
+        this.time = document.getElementById('time-to-go');
+        this.cardArray = cards; 
+    }
+     //Delay @ Start Game
+    startRemember() {
+        this.timeToGo = this.GameTime;
+        
+        setTimeout(() => {
+            
+            this.countDown = this.startTimer();
+        }, 750);
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    //Timer 
+    startTimer() {
+        return setInterval(() => {
+            this.timeToGo--;
+            this.time.innerText = this.timeToGo
+            if (this.timeToGo === 0)
+                this.gameOver();
+        }, 1000);
+    }
+
+    //Game Over
+    gameOver() {
+        clearInterval(this.countDown);
+        $('#game-finished').addClass('visible')
+    }
+}

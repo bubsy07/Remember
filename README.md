@@ -73,6 +73,7 @@ The game has a deck of 6 cards duplicated, so 12 cards in total to match, like s
 an animal, if on the second click the duplicate animal is not revealed the cards rotate back. But if on the second click the duplicate 
 card is found, the images will remain , the score will count. The game will either finish when all cards are matched or when the timer expires.
 
+![game-over](https://user-images.githubusercontent.com/76811599/112763123-0b0e9380-8ffb-11eb-88c9-fbbf3d0b1e1b.png)
 
 
 Colours and theme taking from research 

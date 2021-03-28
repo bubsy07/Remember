@@ -66,6 +66,9 @@ Game page
 
 The game page will consist of a countdown timer from 5 minutes, a running score up to 6 and optional soothing music, which the volume 
 can be unmuted while playing the game. 
+
+![game-page](https://user-images.githubusercontent.com/76811599/112763036-b2d79180-8ffa-11eb-9a7a-2ff704ab5934.png)
+
 The game has a deck of 6 cards duplicated, so 12 cards in total to match, like snap. The cards are clickable and will rotate to reveal
 an animal, if on the second click the duplicate animal is not revealed the cards rotate back. But if on the second click the duplicate 
 card is found, the images will remain , the score will count. The game will either finish when all cards are matched or when the timer expires.

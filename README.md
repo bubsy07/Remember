@@ -14,3 +14,4 @@ Keeping it simple.
 Wireframe
 I created a wire frame as an outline and it changed along the way, but the main concept i kept.
 
+[Uploading Memory wireframe.zip…]()

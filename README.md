@@ -79,7 +79,12 @@ card is found, the images will remain , the score will count. The game will eith
 ![game-over](https://user-images.githubusercontent.com/76811599/112763123-0b0e9380-8ffb-11eb-88c9-fbbf3d0b1e1b.png)
 
 
-Colours and theme taking from research 
+Colours and melody was used with assistance from the following sites.
+
+https://www.uksmobility.co.uk/blog/2015/05/the-importance-of-colour-and-contrast-in-dementia/
+
+https://pixabay.com/music/meditationspiritual-139-meditate-for-meditation-2819/
+
 
 
 

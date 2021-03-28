@@ -50,7 +50,8 @@ So for room all links clickable will have event listener animation which will re
 email me regarding anything.
 
 Front Page overlay
-(https://user-images.githubusercontent.com/76811599/112762653-b833dc80-8ff8-11eb-8d22-e9d32230f6a9.png)
+![front-page](https://user-images.githubusercontent.com/76811599/112762748-4a3be500-8ff9-11eb-9a47-c4c999b4570b.png)
+
 
 images
 

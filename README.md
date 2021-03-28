@@ -18,9 +18,12 @@ I created a wire frame as an outline and it changed along the way, but the main 
 
 Issues and support
 I firstly wanted to make the project simple to use, but as the design progressed I ran into issue around the selection of
-the cards, I was changing the image to a tick via the src and then had further issues reshuffling original images. I decided to keep 
-the design layout similar, but encorporate the fliping of cards. As there are many game examples online, to learn from. I used these and 
-tutorials to aid me to create this basic game and add my own game thoughts around it to better understand js etc.
+the cards, I was changing the image to a tick via the src and then had further issues reshuffling original images. 
+
+![green tick](https://user-images.githubusercontent.com/76811599/112763198-63de2c00-8ffb-11eb-932e-d3be0c2076ae.png)
+
+I decided to keep the design layout similar, but encorporate the fliping of cards. As there are many game examples online, to learn from. I used these 
+and tutorials to aid me to create this basic game and add my own game thoughts around it to better understand js etc.
 Also with help from W3Schools, stack overflow, course notes and tutor support. So Thank you for the massive help, it would have been 
 impossible without this help and information available.
 

@@ -59,10 +59,11 @@ Contact form via email
 
 How to play the game description
 
-
-
+![how to play](https://user-images.githubusercontent.com/76811599/112762946-4a88b000-8ffa-11eb-8c73-5f4d918dc801.png)
 
 Option to Start game
+
+
 
 
 Game page

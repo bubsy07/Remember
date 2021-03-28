@@ -55,10 +55,14 @@ Front Page overlay
 
 Contact form via email
 
+![contact](https://user-images.githubusercontent.com/76811599/112762868-f1b91780-8ff9-11eb-8146-d3b5796f6419.png)
+
+How to play the game description
 
 
 
-images
+
+Option to Start game
 
 
 Game page

@@ -14,7 +14,7 @@ Keeping it simple.
 Wireframe
 I created a wire frame as an outline and it changed along the way, but the main concept i kept.
 
-<<<<<<< HEAD
+[Memory wireframe.zip](https://github.com/bubsy07/Remember/files/6217838/Memory.wireframe.zip)
 
 Issues and support
 I firstly wanted to make the project simple to use, but as the design progressed I ran into issue around the selection of
@@ -84,10 +84,3 @@ Colours and theme taking from research
 
 
 
-
-
-
-
-=======
-[Memory wireframe.zip…]()
->>>>>>> 818ec90aba29dd666de5fd27db250b833481cbc1

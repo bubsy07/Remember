@@ -57,13 +57,9 @@ Contact form via email
 
 ![contact](https://user-images.githubusercontent.com/76811599/112762868-f1b91780-8ff9-11eb-8146-d3b5796f6419.png)
 
-How to play the game description
+How to play the game and Start Game
 
 ![how to play](https://user-images.githubusercontent.com/76811599/112762946-4a88b000-8ffa-11eb-8c73-5f4d918dc801.png)
-
-Option to Start game
-
-
 
 
 Game page
@@ -73,6 +69,8 @@ can be unmuted while playing the game.
 The game has a deck of 6 cards duplicated, so 12 cards in total to match, like snap. The cards are clickable and will rotate to reveal
 an animal, if on the second click the duplicate animal is not revealed the cards rotate back. But if on the second click the duplicate 
 card is found, the images will remain , the score will count. The game will either finish when all cards are matched or when the timer expires.
+
+
 
 Colours and theme taking from research 
 

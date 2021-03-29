@@ -102,41 +102,44 @@ class remember {
      //Delay @ Start Game
     startRemember() {
         this.timeToGo = this.GameTime;
-        
+        this.cardToCheck = null;
+        this.matchedCards = [];
+        this.busy = true;
         setTimeout(() => {
-            
+            this.shuffleCards(this.cardArray);
+            this.busy = false;
             this.countDown = this.startTimer();
         }, 750);
     }
 
     
+//Flipping stopped if matched and if flipping active
+    canFlipCard(card) {
+        return !this.busy && !this.matchedCards.includes(card) && card !== this.cardToCheck;
+    }
+
+    //Flip function
+    flipCard(card) {
+        if (this.canFlipCard(card)) { 
+            card.classList.add('visible');
+            if (this.cardToCheck) {
+                this.checkForCardMatch(card);
+            } else {
+                this.cardToCheck = card;
+            };
+        }
+    } 
     
+//shuffling algorithm  
+     shuffleCards(cardArray) {
+        for (let i = cardArray.length - 1; i > 0; i--) {
+            let randIndex = Math.floor(Math.random() * (i + 1));
+            cardArray[randIndex].style.order = i;
+            cardArray[i].style.order = randIndex;
+        }
+    }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    //Timer 
+//Timer 
     startTimer() {
         return setInterval(() => {
             this.timeToGo--;
@@ -150,5 +153,16 @@ class remember {
     gameOver() {
         clearInterval(this.countDown);
         $('#game-finished').addClass('visible')
+    }
+
+//win 
+    win() {
+        clearInterval(this.countDown);
+        $('#win').addClass('visible');
+    }
+
+//animal clicked
+    getCardType(card) {
+        return card.getElementsByClassName('animal-img')[0].src;
     }
 }

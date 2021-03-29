@@ -86,6 +86,16 @@ https://www.uksmobility.co.uk/blog/2015/05/the-importance-of-colour-and-contrast
 https://pixabay.com/music/meditationspiritual-139-meditate-for-meditation-2819/
 
 
+Game
+
+As previously said tutorials, you tube and examples have been watched to understand how to make a the basic game.
+I have then added my game around it. Credits to the following
+
+https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript
+https://freefrontend.com/javascript-memory-games/
+https://www.youtube.com/watch?v=ZniVgo8U7ek
+https://devsnap.me/javascript-memory-games
+
 
 
 

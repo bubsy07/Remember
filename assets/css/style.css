@@ -238,10 +238,27 @@ h1{
     font-size: 1.625rem;
 }
 
+.card-front {
+    transform: rotateY(180deg);
+}
+
+.card.visible .card-back {
+    transform: rotateY(-180deg);
+}
+
+.card.visible .card-front {
+    transform: rotateY(0);
+}
 
 
+.card.matched .card-front {
+    animation: match 1500ms forwards;
+}
 
-
+.btn-contact {
+    font-size: 1.25rem;
+    
+}
 
 /*------Overlay Animation-*/
 @keyframes on-load {
@@ -250,5 +267,53 @@ h1{
     }
     to {
         background-color: rgba(0, 0, 0, .7);   
+    }
+}
+
+/*------ Screen Size Message-*/
+
+
+/*------Game and Info Container Mobile-*/
+@media (max-width: 500px) {
+    .grid-container {
+        grid-template-columns: repeat(1, auto);
+    }
+
+    .game-info-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (min-width: 501px) {
+    .grid-container {
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .game-info-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (min-width: 800px) {
+    .grid-container {
+        grid-template-columns: repeat(3, auto);
+    }
+
+    .game-info-container {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1000px) {
+    .grid-container {
+        grid-template-columns: repeat(4, auto);
+    }
+
+    .game-info-container{
+        flex-direction: row;
+        align-items: center;
     }
 }

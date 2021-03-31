@@ -55,7 +55,7 @@ $(document).ready(function () {
     let cards = Array.from(document.getElementsByClassName('card'));
 
     //time/card array
-    let play = new remember(cards, 10);
+    let play = new remember(cards, 300);
 
     //Start on front page
 
@@ -165,4 +165,43 @@ class remember {
     getCardType(card) {
         return card.getElementsByClassName('animal-img')[0].src;
     }
-}
+
+//match
+    checkForCardMatch(card) {
+        if (this.getCardType(card) === this.getCardType(this.cardToCheck))
+            this.cardMatch(card, this.cardToCheck);
+        else
+            this.cardMisMatch(card, this.cardToCheck);
+
+        this.cardToCheck = null;
+    }
+
+    //Card Match function pushes matched cards into matchedArray
+    cardMatch(card1, card2) {
+        this.matchedCards.push(card1);
+        this.matchedCards.push(card2);
+        card1.classList.add('matched');
+        card2.classList.add('matched');
+        this.calculateScore();
+        if (this.matchedCards.length === this.cardArray.length)
+            this.win();
+    }
+
+    //Cards Mis Match Function, hides both cards
+    cardMisMatch(card1, card2) {
+        this.busy = true;
+        setTimeout(() => {
+            card1.classList.remove('visible');
+            card2.classList.remove('visible');
+            this.busy = false;
+        }, 1000);
+    }
+
+    //Score
+    calculateScore() {  
+            $("#game-score").each(function () {
+                console.log(this)
+                $(this).text(parseInt($(this).text(), 10) + 1);
+            });      
+    }   
+}    

@@ -105,6 +105,7 @@ class remember {
         this.cardToCheck = null;
         this.matchedCards = [];
         this.busy = true;
+        this.playBackgroundMusic();
         setTimeout(() => {
             this.shuffleCards(this.cardArray);
             this.busy = false;
@@ -203,5 +204,31 @@ class remember {
                 console.log(this)
                 $(this).text(parseInt($(this).text(), 10) + 1);
             });      
-    }   
+    }  
+    
+    
+    //Plays background music, repeats on song end
+    playBackgroundMusic() {
+        var bgMusic = new Audio('assets/melody/audio_c2fcb3b211.mp3')
+        bgMusic.play();
+        bgMusic.volume = 0.3;
+        bgMusic.loop = true;
+
+        //Mutes background music on click
+        $('#on').click(function () {
+            $(bgMusic).each(function () {
+                $(bgMusic).prop('muted', false);
+            });
+            $('#off').removeClass("audio-status")
+            $(this).addClass("audio-status")
+        });
+        $('#off').click(function () {
+            $(bgMusic).each(function () {
+                $(bgMusic).prop('muted', true);
+            });
+            $('#on').removeClass("audio-status")
+            $(this).addClass("audio-status")
+        });
+    }
+
 }    

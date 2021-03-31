@@ -71,7 +71,8 @@ body {
     align-items: center;
     z-index: 1;
     color: azure;
-    
+    overflow-y: scroll;
+    text-align: center;
 }
 
 #front-page-text{
@@ -81,7 +82,8 @@ body {
 
 h1{
     font-size: 300%;
-   position: relative;  
+   position: relative; 
+   align-items: center; 
 }
 
 .overlay-info.visible {

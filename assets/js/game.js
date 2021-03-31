@@ -50,6 +50,8 @@ $("#contact").mouseleave(function () {
 });
 
 
+
+
 $(document).ready(function () {
     //Create Array of 'card'
     let cards = Array.from(document.getElementsByClassName('card'));

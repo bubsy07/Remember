@@ -20,7 +20,8 @@ body {
 #start-game,
 #rules-of-game,
 #win-home,
-
+#on,
+#off,
 .btn-contact {
     cursor: pointer;
 }
@@ -394,4 +395,15 @@ h1{
             -ms-flex-align: center;
                 align-items: center;
     }
+}
+/*------Audio Toggle Styling-*/
+.audio-toggle {
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.audio-status {
+    text-decoration: underline;
+    font-weight: 900;
+    font-size: 1.5rem;
 }

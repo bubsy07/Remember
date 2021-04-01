@@ -154,6 +154,7 @@ h1{
     font-size: 5rem;
      top: 150px;
      color:orange;
+     font-size: 3rem;
 }
 
 #win P {
@@ -309,7 +310,7 @@ h1{
         background-color: rgba(0, 0, 0, 0);   
     }
     to {
-        background-color: rgba(0, 0, 0, .7);   
+        background-color: rgba(0, 0, 0, .8);   
     }
 }
 @keyframes on-load {
@@ -317,7 +318,7 @@ h1{
         background-color: rgba(0, 0, 0, 0);   
     }
     to {
-        background-color: rgba(0, 0, 0, .7);   
+        background-color: rgba(0, 0, 0, .8);   
     }
 }
 
@@ -342,6 +343,8 @@ h1{
             -ms-flex-align: center;
                 align-items: center;
     }
+
+    
 }
 
 @media (min-width: 501px) {
@@ -361,12 +364,14 @@ h1{
             -ms-flex-align: center;
                 align-items: center;
     }
+
+    
 }
 
-@media (min-width: 800px) {
+@media (min-width: 900px) {
     .grid-container {
         -ms-grid-columns: auto 2.5rem auto 2.5rem auto;
-        grid-template-columns: repeat(3, auto);
+        grid-template-columns: repeat(2, auto);
     }
 
     .game-info-container {
@@ -383,6 +388,23 @@ h1{
 @media (min-width: 1000px) {
     .grid-container {
         -ms-grid-columns: auto 2.5rem auto 2.5rem auto 2.5rem auto;
+        grid-template-columns: repeat(3, auto);
+    }
+
+    .game-info-container{
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+}
+
+@media (min-width: 1300px) {
+    .grid-container {
+        -ms-grid-columns: auto 2.5rem auto 2.5rem auto 2.5rem auto;
         grid-template-columns: repeat(4, auto);
     }
 
@@ -396,6 +418,9 @@ h1{
                 align-items: center;
     }
 }
+
+
+
 /*------Audio Toggle Styling-*/
 .audio-toggle {
     text-align: center;

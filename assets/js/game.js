@@ -87,16 +87,17 @@ $('#start-game').click(function () {
     //Flips the cards on click
     cards.forEach(card => {
         card.addEventListener('click', () => {
-            play.flipCard(card);
+        play.flipCard(card);
+
+        let audio = card.querySelector("audio");
+        audio.play();
+        audio.volume = 1;
+        
         });
     });
 });
 
-function playSound() {
-  var sound = document.getElementById("audio");
-  sound.volume = 1;
-  sound.play();
-}
+
 
 
  //add constructor to handle the game https://www.w3schools.com/js/js_object_constructors.asp

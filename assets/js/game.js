@@ -91,6 +91,14 @@ $('#start-game').click(function () {
         });
     });
 });
+
+function playSound() {
+  var sound = document.getElementById("audio");
+  sound.volume = 1;
+  sound.play();
+}
+
+
  //add constructor to handle the game https://www.w3schools.com/js/js_object_constructors.asp
 class remember {
 
@@ -141,6 +149,7 @@ class remember {
             cardArray[i].style.order = randIndex;
         }
     }
+
     
 //Timer 
     startTimer() {
@@ -166,7 +175,7 @@ class remember {
 
 //animal clicked
     getCardType(card) {
-        return card.getElementsByClassName('animal-img')[0].src;
+               return card.getElementsByClassName('animal-img')[0].src;
     }
 
 //match
@@ -232,5 +241,7 @@ class remember {
             $(this).addClass("audio-status")
         });
     }
+
+    
 
 }    

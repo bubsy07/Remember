@@ -203,7 +203,7 @@ class remember {
             card1.classList.remove('visible');
             card2.classList.remove('visible');
             this.busy = false;
-        }, 1000);
+        }, 1250);
     }
 
     //Score

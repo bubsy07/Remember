@@ -50,8 +50,6 @@ $("#contact").mouseleave(function () {
 });
 
 
-
-
 $(document).ready(function () {
     //Create Array of 'card'
     let cards = Array.from(document.getElementsByClassName('card'));
@@ -84,7 +82,7 @@ $('#start-game').click(function () {
         $("#what-to-do").hide("slow");  
     });
 
-    //Flips the cards on click
+    //Flips the cards on click and say card animal
     cards.forEach(card => {
         card.addEventListener('click', () => {
         play.flipCard(card);
@@ -96,8 +94,6 @@ $('#start-game').click(function () {
         });
     });
 });
-
-
 
 
  //add constructor to handle the game https://www.w3schools.com/js/js_object_constructors.asp
@@ -242,7 +238,4 @@ class remember {
             $(this).addClass("audio-status")
         });
     }
-
-    
-
 }    

@@ -14,8 +14,6 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Remember Memory Game</title>
 
-
-
  <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
     <script type="text/javascript">
         (function() {
@@ -30,8 +28,7 @@
     <div id="front-page" class="overlay-info visible mx-auto">
         <div id="front-page-text">
         <h1>Welcome to Remember - Hope You Enjoy</h1>
-
-            
+           
      <!-- email -->
           <!-- Contact Form -->
             <div id="contact">Contact <i class="far fa-envelope"></i></div>
@@ -65,9 +62,7 @@
             <div id="mail-nok">
                 <p>Message unsent</p>
             </div>
-
-
-           
+          
             <div id="rules-of-game">How to Play  <i class="fas fa-book-open"></i></div>
             <div id="what-to-do">
                <p>Click on the cards to match the animals!<br>Can you find all matches before the time expires?</p>
@@ -84,16 +79,23 @@
     <div class="grid-container">
         <div class="game-info-container">
             <div class="game-area mx-auto">
-                Game Ends in: <span id="time-to-go">300</span>
-            </div>
-            
-             <!-- Music Voulume toggler -->
-    <div class="audio-toggle game-area mx-auto">
-        Melody: <span id="on" class="audio-status">ON</span> <span id="off">OFF</span></div>
-           
-            <div class="game-area mx-auto">
                     <div class="score">Correct Score: <span id="game-score">0</span><span>/6</span></div>
-            </div>     
+            </div> 
+            
+             <!-- Music toggle -->
+            <div class="audio-toggle game-area mx-auto">
+                Melody: <span id="on" class="audio-status">ON</span> <span id="off">OFF</span>
+            </div>
+
+            <!-- Voice toggle -->
+            <div class="voice-toggle game-area mx-auto">
+                Voice: <span id="voice-on" class="voice-status">ON</span> <span id="voice-off">OFF</span>
+            </div>
+
+
+            <div class="game-area mx-auto">
+                Game Ends in: <span id="time-to-go">300</span>
+            </div>                
     </div>
 
 <!-- Game Cards -->
@@ -211,8 +213,7 @@
     <div id="win" class="overlay-info mx-auto">
         <h1> Well Done</h1>
         <p>100 %</p>
-        <p>You Beat The Game</p>
-        
+        <p>You Beat The Game</p>     
         <div id="win-home"> 
         <p>Click to Return To Home Screen <i class="fas fa-home"></i></p>
         </div>
@@ -229,8 +230,7 @@
 
 <!-- Footer                                                   -->
     <footer class="footer-text">
-        Website Created by 
-        <br>iC Automation 
+        Website Created by iC Automation 
     </footer>
 
 <!-- Scripts                                                  -->

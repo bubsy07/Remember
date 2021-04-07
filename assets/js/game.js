@@ -1,10 +1,3 @@
-//Plays background music, repeats on song end
-window.addEventListener("DOMContentLoaded", event => {
-    const audio = document.querySelector("audio");
-    audio.volume = 0.2;
-    
-});
-
 //Overlay pages
 
 //turn links colour on hover
@@ -49,7 +42,6 @@ $("#contact").mouseleave(function () {
     $(this).css('color', 'azure');
 });
 
-
 $(document).ready(function () {
     //Create Array of 'card'
     let cards = Array.from(document.getElementsByClassName('card'));
@@ -82,19 +74,32 @@ $('#start-game').click(function () {
         $("#what-to-do").hide("slow");  
     });
 
-    //Flips the cards on click and say card animal
+ //click mute voice animal
+    jQuery('#voice-on').click(function () {
+        jQuery('audio').prop("muted", false);
+        $('#voice-off').removeClass("voice-status");
+            $(this).addClass("voice-status");
+    
+        });
+
+    jQuery('#voice-off').click(function () {
+        jQuery('audio').prop("muted", true);
+         $('#voice-on').removeClass("voice-status");
+            $(this).addClass("voice-status");
+        });
+    
+
+      //Flips the cards on click and say card animal
     cards.forEach(card => {
         card.addEventListener('click', () => {
         play.flipCard(card);
 
         let audio = card.querySelector("audio");
         audio.play();
-        audio.volume = 1;
-        
+        audio.volume = 1; 
         });
     });
 });
-
 
  //add constructor to handle the game https://www.w3schools.com/js/js_object_constructors.asp
 class remember {
@@ -119,8 +124,7 @@ class remember {
             this.countDown = this.startTimer();
         }, 750);
     }
-
-    
+ 
 //Flipping stopped if matched and if flipping active
     canFlipCard(card) {
         return !this.busy && !this.matchedCards.includes(card) && card !== this.cardToCheck;
@@ -146,8 +150,7 @@ class remember {
             cardArray[i].style.order = randIndex;
         }
     }
-
-    
+   
 //Timer 
     startTimer() {
         return setInterval(() => {
@@ -213,8 +216,7 @@ class remember {
                 $(this).text(parseInt($(this).text(), 10) + 1);
             });      
     }  
-    
-    
+     
     //Plays background music, repeats on song end
     playBackgroundMusic() {
         var bgMusic = new Audio('assets/melody/audio_c2fcb3b211.mp3')
@@ -239,3 +241,4 @@ class remember {
         });
     }
 }    
+

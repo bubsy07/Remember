@@ -415,9 +415,9 @@ h1{
 }
 
 .audio-status {
-    text-decoration: underline;
     font-weight: 900;
     font-size: 1.5rem;
+    color: blue;
 }
 
 /*------voice Toggle Styling-*/
@@ -427,7 +427,9 @@ h1{
 }
 
 .voice-status {
-    text-decoration: underline;
     font-weight: 900;
     font-size: 1.5rem;
+    color: blue;
 }
+
+

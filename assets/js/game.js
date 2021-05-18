@@ -89,6 +89,9 @@ $('#start-game').click(function () {
         });
     
 
+
+
+
       //Flips the cards on click and say card animal
     cards.forEach(card => {
         card.addEventListener('click', () => {

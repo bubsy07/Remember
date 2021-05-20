@@ -2,6 +2,12 @@
 
 //turn links colour on hover
 
+window.onload = function() {
+    $('#voice-on').css('background-color', 'green');
+    $('#melody-On').css('background-color', 'green')
+
+}
+
 $("#start-game").mouseenter(function () {
     $(this).css('color', 'lightgreen');
 });
@@ -76,17 +82,22 @@ $('#start-game').click(function () {
 
  //click mute voice animal
     jQuery('#voice-on').click(function () {
+        $(this).css('background-color', 'green');
         jQuery('audio').prop("muted", false);
         $('#voice-off').removeClass("voice-status");
+        $('#voice-off').css('background-color', 'white') 
             $(this).addClass("voice-status");
     
         });
 
     jQuery('#voice-off').click(function () {
+         $(this).css('background-color', 'red');
         jQuery('audio').prop("muted", true);
          $('#voice-on').removeClass("voice-status");
+         $('#voice-on').css('background-color', 'white')
             $(this).addClass("voice-status");
         });
+
 
       //Flips the cards on click and say card animal
     cards.forEach(card => {
@@ -230,17 +241,21 @@ class remember {
 
         //Mutes / play melody
         $('#melody-On').click(function () {
+            $(this).css('background-color', 'green');
             $(melody).each(function () {
-                $(melody).prop('muted', false);
+                $(melody).prop('muted', false);    
             });
             $('#melody-Off').removeClass("audio-status")
+            $('#melody-Off').css('background-color', 'white') 
             $(this).addClass("audio-status")
         });
         $('#melody-Off').click(function () {
+            $(this).css('background-color', 'red');
             $(melody).each(function () {
                 $(melody).prop('muted', true);
             });
             $('#melody-On').removeClass("audio-status")
+            $('#melody-On').css('background-color', 'white') 
             $(this).addClass("audio-status")
         });
     }

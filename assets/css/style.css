@@ -412,24 +412,24 @@ h1{
 /*------Audio Toggle Styling-*/
 .audio-toggle {
     text-align: center;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 
 .audio-status {
     font-weight: 900;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: blue;
 }
 
 /*------voice Toggle Styling-*/
 .voice-toggle {
     text-align: center;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 
 .voice-status {
     font-weight: 900;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: blue;   
 }
 

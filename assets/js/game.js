@@ -2,14 +2,9 @@
 
 //turn links colour on hover
 
-window.onload = function() {
-    $('#voice-on').css('background-color', 'green' );
-    
-    $('#voice-on').css('color', 'blue');
-    
-    $('#melody-On').css('background-color', 'green')
-    $('#voice-on').css('color', 'blue');
-
+window.onload = function() {  
+    $('#voice-on').css('color', 'green');
+    $('#melody-On').css('color', 'green');
 }
 
 $("#start-game").mouseenter(function () {
@@ -86,19 +81,19 @@ $('#start-game').click(function () {
 
  //click mute voice animal
     jQuery('#voice-on').click(function () {
-        $(this).css('background-color', 'green');
+        $(this).css('color', 'green');
         jQuery('audio').prop("muted", false);
         $('#voice-off').removeClass("voice-status");
-        $('#voice-off').css('background-color', 'white') 
+        
             $(this).addClass("voice-status");
     
         });
 
     jQuery('#voice-off').click(function () {
-         $(this).css('background-color', 'red');
+         $(this).css('color', 'red');
         jQuery('audio').prop("muted", true);
          $('#voice-on').removeClass("voice-status");
-         $('#voice-on').css('background-color', 'white')
+         
             $(this).addClass("voice-status");
         });
 
@@ -245,21 +240,19 @@ class remember {
 
         //Mutes / play melody
         $('#melody-On').click(function () {
-            $(this).css('background-color', 'green');
+            $(this).css('color', 'green');
             $(melody).each(function () {
                 $(melody).prop('muted', false);    
             });
             $('#melody-Off').removeClass("audio-status")
-            $('#melody-Off').css('background-color', 'white') 
             $(this).addClass("audio-status")
         });
         $('#melody-Off').click(function () {
-            $(this).css('background-color', 'red');
+            $(this).css('color', 'red');
             $(melody).each(function () {
                 $(melody).prop('muted', true);
             });
             $('#melody-On').removeClass("audio-status")
-            $('#melody-On').css('background-color', 'white') 
             $(this).addClass("audio-status")
         });
     }

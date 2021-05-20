@@ -3,8 +3,12 @@
 //turn links colour on hover
 
 window.onload = function() {
-    $('#voice-on').css('background-color', 'green');
+    $('#voice-on').css('background-color', 'green' );
+    
+    $('#voice-on').css('color', 'blue');
+    
     $('#melody-On').css('background-color', 'green')
+    $('#voice-on').css('color', 'blue');
 
 }
 

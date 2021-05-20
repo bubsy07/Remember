@@ -33,6 +33,7 @@ body {
     text-align: center;
     font-weight: normal;
     font-size: 4rem;
+    margin-bottom: 0px;
 }
 .game-area {
     font-size: 2rem;
@@ -63,7 +64,7 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin: 1rem;
+    margin: 0rem 1rem 1rem 1rem;
     -webkit-perspective: 10rem;
             perspective: 10rem;
     -webkit-box-align: center;
@@ -432,3 +433,6 @@ h1{
     color: blue;   
 }
 
+.button {
+    width: 150px;
+}

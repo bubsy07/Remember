@@ -87,10 +87,6 @@ $('#start-game').click(function () {
          $('#voice-on').removeClass("voice-status");
             $(this).addClass("voice-status");
         });
-    
-
-
-
 
       //Flips the cards on click and say card animal
     cards.forEach(card => {
@@ -104,14 +100,18 @@ $('#start-game').click(function () {
     });
 });
 
+
  //add constructor to handle the game https://www.w3schools.com/js/js_object_constructors.asp
 class remember {
 
     //Game content
     constructor(cards, GameTime) {
         this.GameTime = GameTime;
+        this.timeleft = GameTime;
+        this. remainingtime = document.getElementById('time-left');
         this.timeToGo = GameTime;
         this.time = document.getElementById('time-to-go');
+       
         this.cardArray = cards; 
     }
      //Delay @ Start Game
@@ -120,7 +120,7 @@ class remember {
         this.cardToCheck = null;
         this.matchedCards = [];
         this.busy = true;
-        this.playBackgroundMusic();
+        this.playMelody();
         setTimeout(() => {
             this.shuffleCards(this.cardArray);
             this.busy = false;
@@ -144,7 +144,7 @@ class remember {
             };
         }
     } 
-    
+
 //shuffling algorithm  
      shuffleCards(cardArray) {
         for (let i = cardArray.length - 1; i > 0; i--) {
@@ -153,6 +153,7 @@ class remember {
             cardArray[i].style.order = randIndex;
         }
     }
+
    
 //Timer 
     startTimer() {
@@ -209,7 +210,7 @@ class remember {
             card1.classList.remove('visible');
             card2.classList.remove('visible');
             this.busy = false;
-        }, 1250);
+        }, 1750);
     }
 
     //Score
@@ -220,26 +221,26 @@ class remember {
             });      
     }  
      
-    //Plays background music, repeats on song end
-    playBackgroundMusic() {
-        var bgMusic = new Audio('assets/melody/audio_c2fcb3b211.mp3')
-        bgMusic.play();
-        bgMusic.volume = 0.3;
-        bgMusic.loop = true;
+    //Plays Melody
+    playMelody() {
+        var melody = new Audio('assets/melody/audio_c2fcb3b211.mp3')
+        melody.play();
+        melody.volume = 0.2;
+        melody.loop = true;
 
-        //Mutes background music on click
-        $('#on').click(function () {
-            $(bgMusic).each(function () {
-                $(bgMusic).prop('muted', false);
+        //Mutes / play melody
+        $('#melody-On').click(function () {
+            $(melody).each(function () {
+                $(melody).prop('muted', false);
             });
-            $('#off').removeClass("audio-status")
+            $('#melody-Off').removeClass("audio-status")
             $(this).addClass("audio-status")
         });
-        $('#off').click(function () {
-            $(bgMusic).each(function () {
-                $(bgMusic).prop('muted', true);
+        $('#melody-Off').click(function () {
+            $(melody).each(function () {
+                $(melody).prop('muted', true);
             });
-            $('#on').removeClass("audio-status")
+            $('#melody-On').removeClass("audio-status")
             $(this).addClass("audio-status")
         });
     }

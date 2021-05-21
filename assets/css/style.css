@@ -3,17 +3,14 @@
 * Autoprefixer: v9.7.6
 * Browsers: last 4 version
 */
-
 @import url('https://fonts.googleapis.com/css?family=Oswald|Lato:300');
-
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Lato&display=swap');
 
 body {
    background-color: lightgreen;
     margin: 3px;
     color:blue;
-    font-family: "Architects Daughter";
-}
+    font-family: "Architects Daughter";}
 
 /*------Mouse Styling-*/
 #contact,
@@ -25,23 +22,20 @@ body {
 #voice-on,
 #voice-off,
 .btn-contact {
-    cursor: pointer;
-}
+    cursor: pointer;}
 
 /*------Title Text Styling-*/
 .game-title {
     text-align: center;
     font-weight: normal;
     font-size: 4rem;
-    margin-bottom: 0px;
-}
+    margin-bottom: 0px;}
+
 .game-area {
-    font-size: 2rem;
-}
+    font-size: 2rem;}
 
 .score {
-    text-align: center;
-}
+    text-align: center;}
 
 /*------Game display-*/
 .game-info-container {
@@ -51,8 +45,7 @@ body {
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between;
-}
+            justify-content: space-between;}
 
 /*------Grid display --*/
 .grid-container {
@@ -69,8 +62,7 @@ body {
             perspective: 10rem;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center;
-}
+            align-items: center;}
 
 /*------Overlay Styling-*/
 .overlay-info {
@@ -86,21 +78,18 @@ body {
     z-index: 1;
     color: azure;
     overflow-y: scroll;
-    text-align: center;
-}
+    text-align: center;}
 
 #front-page-text{
     position: relative;
-    top: 100px;
-}
+    top: 100px;}
 
-h1{
+h1 {
     font-size: 300%;
    position: relative; 
    -webkit-box-align: center; 
        -ms-flex-align: center; 
-           align-items: center; 
-}
+           align-items: center;}
 
 .overlay-info.visible {
     display: -webkit-box;
@@ -111,44 +100,38 @@ h1{
         -ms-flex-direction: column;
             flex-direction: column;
     -webkit-animation: on-load 100ms forwards;
-            animation: on-load 100ms forwards;
-}
+            animation: on-load 100ms forwards;}
 
-#rules-of-game{
+#rules-of-game {
     position: relative;
     text-align: center;
     font-size: 3rem;
-    top: 10px;
-}
+    top: 10px;}
 
 #what-to-do {
     position: relative;
     display: none;
     text-align: center;
     font-size: 1.625rem;
-    top: 10px;
-}
+    top: 10px;}
 
 #start-game {
     
     text-align: center;
-    font-size: 3rem;
-}
+    font-size: 3rem;}
 
 #game-finished h1 {
     position: relative;
     text-align: center;
     font-size: 3rem;
      top: 200px;
-     color: red;
-}
+     color: red;}
 
 #game-finished p {
     position: relative;
     text-align: center;
     font-size: 3rem;
-    top: 250px;
-}
+    top: 250px;}
 
 #win h1 {
     position: relative;
@@ -156,22 +139,19 @@ h1{
     font-size: 5rem;
      top: 150px;
      color:orange;
-     font-size: 3rem;
-}
+     font-size: 3rem;}
 
 #win P {
     position: relative;
     text-align: center;
     font-size: 3rem;
-     top: 200px;   
-}
+     top: 200px;}
 
 #win-home p {
     position: relative;
     text-align: center;
     font-size: 3rem;
-    top: 250px;
-}
+    top: 250px;}
 
 /*------Card Styling-*/
 .card {
@@ -180,31 +160,26 @@ h1{
     width: 15rem;
     background-color: #fff;
     border: 0.125rem solid #000;
-    border-radius: 0.5rem;
-}
+    border-radius: 0.5rem;}
 
 .daff-img {
     position: absolute;
     height: 8rem;
     width: 15rem;
     border-radius: 0.5rem;
-     border: 0.125rem solid #000;
-}
+     border: 0.125rem solid #000;}
 
 .card-front {
     -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
-}
+            transform: rotateY(180deg);}
 
 .card.visible .card-back {
     -webkit-transform: rotateY(-180deg);
-            transform: rotateY(-180deg);
-}
+            transform: rotateY(-180deg);}
 
 .card.visible .card-front {
     -webkit-transform: rotateY(0);
-            transform: rotateY(0);
-}
+            transform: rotateY(0);}
 
 .card-face {
     position: absolute;
@@ -222,8 +197,7 @@ h1{
     transition: -webkit-transform 500ms ease-in-out;
     -o-transition: transform 500ms ease-in-out;
     transition: transform 500ms ease-in-out;
-    transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
-}
+    transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;}
 
 .animal-img {
     
@@ -231,43 +205,36 @@ h1{
     height: 8rem;
     width: 15rem;
     border-radius: 0.5rem;
-     border: 0.125rem solid #000;
-}
+     border: 0.125rem solid #000;}
 
 .card.matched .card-front {
     -webkit-animation: match 1500ms forwards;
-            animation: match 1500ms forwards;
-}
+            animation: match 1500ms forwards;}
 
 /*------Footer Styling-*/
 .footer-text {
     text-align: center;
     color:blue;
-    bottom: 0px;
-}
+    bottom: 0px;}
 
 /*-----Contact Form -*/
-
 #contact{
     position: relative;
     text-align: center;
     font-size: 3rem;
-    top: 10px;
-}
+    top: 10px;}
 
 #contact-form {
     position: relative;
     display: none;
     text-align: center;
     font-size: 1.625rem;
-    top: 10px;
-}
+    top: 10px;}
 
 /*-----Contact Form Response Messages-*/
 #mail-ok,
 #mail-nok {
-    display: none;
-}
+    display: none;}
 
 #mail-ok.visible,
 #mail-nok.visible {
@@ -275,32 +242,26 @@ h1{
     display: -ms-flexbox;
     display: flex;
     text-align: center;
-    font-size: 1.625rem;
-}
+    font-size: 1.625rem;}
 
 .card-front {
     -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
-}
+            transform: rotateY(180deg);}
 
 .card.visible .card-back {
     -webkit-transform: rotateY(-180deg);
-            transform: rotateY(-180deg);
-}
+            transform: rotateY(-180deg);}
 
 .card.visible .card-front {
     -webkit-transform: rotateY(0);
-            transform: rotateY(0);
-}
+            transform: rotateY(0);}
 
 .card.matched .card-front {
     -webkit-animation: match 1500ms forwards;
-            animation: match 1500ms forwards;
-}
+            animation: match 1500ms forwards;}
 
 .btn-contact {
-    font-size: 1.25rem; 
-}
+    font-size: 1.25rem;}
 
 /*------Overlay Animation-*/
 @-webkit-keyframes on-load {
@@ -336,19 +297,15 @@ h1{
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
-    }
-
-    
+    }  
 }
 
 @media (min-width: 501px) {
     .grid-container {
         -ms-grid-columns: auto 2.5rem auto;
         grid-template-columns: repeat(2, auto);
-        font-size: 1rem;
-       
+        font-size: 1rem;      
     }
-
     .game-info-container {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -365,7 +322,6 @@ h1{
         -ms-grid-columns: auto 2.5rem auto 2.5rem auto;
         grid-template-columns: repeat(2, auto);
     }
-
     .game-info-container {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
@@ -412,27 +368,17 @@ h1{
 /*------Audio Toggle Styling-*/
 .audio-toggle {
     text-align: center;
-    font-size: 1.5rem;
-}
+    font-size: 1.75rem;}
 
 .audio-status {
     font-weight: 900;
-    font-size: 2rem;
-    color: blue;
-}
+    font-size: 2.5rem;}
 
 /*------voice Toggle Styling-*/
 .voice-toggle {
     text-align: center;
-    font-size: 1.5rem;
-}
+    font-size: 1.75rem;}
 
 .voice-status {
     font-weight: 900;
-    font-size: 2rem;
-    color: blue;   
-}
-
-.button {
-    width: 150px;
-}
+    font-size: 2.25rem;}

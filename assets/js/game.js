@@ -1,10 +1,11 @@
 //Overlay pages
-
 //turn links colour on hover
 
 window.onload = function() {  
     $('#voice-on').css('color', 'green');
-    $('#melody-On').css('color', 'green');
+    $('#melody-on').css('color', 'green');
+    $('#voice-off').css('color', 'red');
+    $('#melody-off').css('color', 'red');
 }
 
 $("#start-game").mouseenter(function () {
@@ -84,19 +85,15 @@ $('#start-game').click(function () {
         $(this).css('color', 'green');
         jQuery('audio').prop("muted", false);
         $('#voice-off').removeClass("voice-status");
-        
-            $(this).addClass("voice-status");
-    
+        $(this).addClass("voice-status");   
         });
 
     jQuery('#voice-off').click(function () {
          $(this).css('color', 'red');
         jQuery('audio').prop("muted", true);
          $('#voice-on').removeClass("voice-status");
-         
-            $(this).addClass("voice-status");
+         $(this).addClass("voice-status");
         });
-
 
       //Flips the cards on click and say card animal
     cards.forEach(card => {
@@ -110,7 +107,6 @@ $('#start-game').click(function () {
     });
 });
 
-
  //add constructor to handle the game https://www.w3schools.com/js/js_object_constructors.asp
 class remember {
 
@@ -121,7 +117,6 @@ class remember {
         this. remainingtime = document.getElementById('time-left');
         this.timeToGo = GameTime;
         this.time = document.getElementById('time-to-go');
-       
         this.cardArray = cards; 
     }
      //Delay @ Start Game
@@ -163,7 +158,6 @@ class remember {
             cardArray[i].style.order = randIndex;
         }
     }
-
    
 //Timer 
     startTimer() {
@@ -198,7 +192,6 @@ class remember {
             this.cardMatch(card, this.cardToCheck);
         else
             this.cardMisMatch(card, this.cardToCheck);
-
         this.cardToCheck = null;
     }
 
@@ -239,20 +232,20 @@ class remember {
         melody.loop = true;
 
         //Mutes / play melody
-        $('#melody-On').click(function () {
+        $('#melody-on').click(function () {
             $(this).css('color', 'green');
             $(melody).each(function () {
                 $(melody).prop('muted', false);    
             });
-            $('#melody-Off').removeClass("audio-status")
+            $('#melody-off').removeClass("audio-status")
             $(this).addClass("audio-status")
         });
-        $('#melody-Off').click(function () {
+        $('#melody-off').click(function () {
             $(this).css('color', 'red');
             $(melody).each(function () {
                 $(melody).prop('muted', true);
             });
-            $('#melody-On').removeClass("audio-status")
+            $('#melody-on').removeClass("audio-status")
             $(this).addClass("audio-status")
         });
     }

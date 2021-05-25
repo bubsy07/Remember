@@ -53,7 +53,7 @@ $(document).ready(function () {
     let cards = Array.from(document.getElementsByClassName('card'));
 
     //time/card array
-    let play = new remember(cards, 300);
+    let play = new remember(cards, 100);
 
     //Start on front page
 
@@ -113,11 +113,10 @@ class remember {
     //Game content
     constructor(cards, GameTime) {
         this.GameTime = GameTime;
-        this.timeleft = GameTime;
-        this. remainingtime = document.getElementById('time-left');
         this.timeToGo = GameTime;
         this.time = document.getElementById('time-to-go');
         this.cardArray = cards; 
+
     }
      //Delay @ Start Game
     startRemember() {
@@ -127,9 +126,9 @@ class remember {
         this.busy = true;
         this.playMelody();
         setTimeout(() => {
-            this.shuffleCards(this.cardArray);
+            this.shuffle(this.cardArray);
             this.busy = false;
-            this.countDown = this.startTimer();
+            this.timerCountdown = this.timerStart();
         }, 750);
     }
  
@@ -150,17 +149,19 @@ class remember {
         }
     } 
 
-//shuffling algorithm  
-     shuffleCards(cardArray) {
+//shuffling algorithm    
+    shuffle(cardArray) {
         for (let i = cardArray.length - 1; i > 0; i--) {
-            let randIndex = Math.floor(Math.random() * (i + 1));
-            cardArray[randIndex].style.order = i;
-            cardArray[i].style.order = randIndex;
-        }
+            let j = Math.floor(Math.random() * (i + 1));
+            cardArray[j].style.order = i;
+            cardArray[i].style.order = j;
     }
+}
    
+
+
 //Timer 
-    startTimer() {
+    timerStart() {
         return setInterval(() => {
             this.timeToGo--;
             this.time.innerText = this.timeToGo
@@ -169,15 +170,17 @@ class remember {
         }, 1000);
     }
 
-    //Game Over
+
+//Game Over
     gameOver() {
-        clearInterval(this.countDown);
+        clearInterval(this.timerCountdown);
         $('#game-finished').addClass('visible')
     }
 
+
 //win 
     win() {
-        clearInterval(this.countDown);
+        clearInterval(this.timerCountdown);
         $('#win').addClass('visible');
     }
 
@@ -196,22 +199,22 @@ class remember {
     }
 
     //Card Match function pushes matched cards into matchedArray
-    cardMatch(card1, card2) {
-        this.matchedCards.push(card1);
-        this.matchedCards.push(card2);
-        card1.classList.add('matched');
-        card2.classList.add('matched');
+    cardMatch(card_A, card_B) {
+        this.matchedCards.push(card_A);
+        this.matchedCards.push(card_B);
+        card_A.classList.add('matched');
+        card_B.classList.add('matched');
         this.calculateScore();
         if (this.matchedCards.length === this.cardArray.length)
             this.win();
     }
 
     //Cards Mis Match Function, hides both cards
-    cardMisMatch(card1, card2) {
+    cardMisMatch(card_A, card_B) {
         this.busy = true;
         setTimeout(() => {
-            card1.classList.remove('visible');
-            card2.classList.remove('visible');
+            card_A.classList.remove('visible');
+            card_B.classList.remove('visible');
             this.busy = false;
         }, 1750);
     }

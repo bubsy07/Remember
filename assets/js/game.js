@@ -53,7 +53,7 @@ $(document).ready(function () {
     let cards = Array.from(document.getElementsByClassName('card'));
 
     //time/card array
-    let play = new remember(cards, 100);
+    let play = new remember(cards);
 
     //Start on front page
 
@@ -107,20 +107,17 @@ $('#start-game').click(function () {
     });
 });
 
+var gameInPlay = true;
+
  //add constructor to handle the game https://www.w3schools.com/js/js_object_constructors.asp
 class remember {
-
     //Game content
-    constructor(cards, GameTime) {
-        this.GameTime = GameTime;
-        this.timeToGo = GameTime;
-        this.time = document.getElementById('time-to-go');
+    constructor(cards) {
         this.cardArray = cards; 
-
     }
+
      //Delay @ Start Game
     startRemember() {
-        this.timeToGo = this.GameTime;
         this.cardToCheck = null;
         this.matchedCards = [];
         this.busy = true;
@@ -128,7 +125,7 @@ class remember {
         setTimeout(() => {
             this.shuffle(this.cardArray);
             this.busy = false;
-            this.timerCountdown = this.timerStart();
+            this.timerStart();  
         }, 750);
     }
  
@@ -158,29 +155,30 @@ class remember {
     }
 }
    
-
-
 //Timer 
     timerStart() {
-        return setInterval(() => {
-            this.timeToGo--;
-            this.time.innerText = this.timeToGo
-            if (this.timeToGo === 0)
-                this.gameOver();
-        }, 1000);
+    var remainingTime = 60;
+    var elem = document.getElementById('time-to-go');
+    var timer = setInterval(countdown, 1000);
+    function countdown() {
+      if (remainingTime <0) {
+        clearInterval(timer)
+        $('#game-finished').addClass('visible');
+
+        } else if (gameInPlay == false) {
+            clearInterval(timer);
+            console.log(gameInPlay);
+        
+        } else {
+        elem.innerHTML = remainingTime;
+        remainingTime--;
+      }
     }
-
-
-//Game Over
-    gameOver() {
-        clearInterval(this.timerCountdown);
-        $('#game-finished').addClass('visible')
     }
-
 
 //win 
-    win() {
-        clearInterval(this.timerCountdown);
+    win() {     
+        gameInPlay = false; 
         $('#win').addClass('visible');
     }
 

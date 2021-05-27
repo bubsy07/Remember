@@ -133,8 +133,6 @@ $('#start-game').click(function () {
 
      });
 
-
-
  //click mute voice animal
     jQuery('#voice-on').click(function () {
         $(this).css('color', 'green');
@@ -150,7 +148,7 @@ $('#start-game').click(function () {
          $(this).addClass("voice-status");
         });
 
-      //Flips the cards on click and say card animal
+      //Flip and say card animal
     cards.forEach(card => {
         card.addEventListener('click', () => {
         play.flipCard(card);
@@ -177,8 +175,7 @@ class remember {
     startRemember() {
         this.cardToCheck = null;
         this.matchedCards = [];
-        this.busy = true;
-                
+        this.busy = true;        
         this.playMelody();
         setTimeout(() => {
             this.shuffle(this.cardArray);
@@ -197,10 +194,9 @@ class remember {
         if (this.canFlipCard(card)) {
             gameMoves++;
             this.gameCount.innerText = gameMoves;
- 
             card.classList.add('visible');
             if (this.cardToCheck) {
-                this.checkForCardMatch(card);
+                this.analyseMatch(card);
             } else {
                 this.cardToCheck = card;
             };
@@ -253,19 +249,17 @@ class remember {
                
     }
 
-
-
 //match
-    checkForCardMatch(card) {
+    analyseMatch(card) {
         if (this.getCardType(card) === this.getCardType(this.cardToCheck))
-            this.cardMatch(card, this.cardToCheck);
+            this.match(card, this.cardToCheck);
         else
-            this.cardMisMatch(card, this.cardToCheck);
+            this.misMatch(card, this.cardToCheck);
         this.cardToCheck = null;
     }
 
     //Card Match function pushes matched cards into matchedArray
-    cardMatch(card_A, card_B) {
+    match(card_A, card_B) {
         this.matchedCards.push(card_A);
         this.matchedCards.push(card_B);
         card_A.classList.add('matched');
@@ -276,7 +270,7 @@ class remember {
     }
 
     //Cards Mis Match Function, hides both cards
-    cardMisMatch(card_A, card_B) {
+    misMatch(card_A, card_B) {
         this.busy = true;
         setTimeout(() => {
             card_A.classList.remove('visible');

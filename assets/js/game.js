@@ -6,6 +6,7 @@ window.onload = function() {
     $('#melody-on').css('color', 'green');
     $('#voice-off').css('color', 'red');
     $('#melody-off').css('color', 'red');
+    $("#resume").hide();
 }
 
 $("#start-game").mouseenter(function () {
@@ -48,6 +49,34 @@ $("#contact").mouseleave(function () {
     $(this).css('color', 'azure');
 });
 
+$("#home").mouseenter(function () {
+    $(this).css('color', 'azure');
+})
+
+$("#home").mouseleave(function () {
+    $(this).css('color', 'grey');
+});
+
+$("#pause").mouseenter(function () {
+    $(this).css('color', 'azure');
+})
+
+$("#pause").mouseleave(function () {
+    $(this).css('color', 'grey');
+});
+
+$("#resume").mouseenter(function () {
+    $(this).css('color', 'azure');
+})
+
+$("#resume").mouseleave(function () {
+    $(this).css('color', 'grey');
+});
+
+
+
+
+
 $(document).ready(function () {
     //Create Array of 'card'
     let cards = Array.from(document.getElementsByClassName('card'));
@@ -80,6 +109,32 @@ $('#start-game').click(function () {
         $("#what-to-do").hide("slow");  
     });
 
+    //Restart game 
+     $("#home").click(function () {
+        gameReset = true;
+        location.reload();  
+     });
+     
+     
+     //Pause game 
+     $("#pause").click(function () {
+        gameReset = true;
+        $("#pause").hide();
+        $("#resume").show();
+
+     });
+
+     //Resume game 
+     $("#resume").click(function () { 
+        gameReset = false;
+        $("#resume").hide();
+        $("#pause").show();
+        play.timerStart();
+
+     });
+
+
+
  //click mute voice animal
     jQuery('#voice-on').click(function () {
         $(this).css('color', 'green');
@@ -99,7 +154,6 @@ $('#start-game').click(function () {
     cards.forEach(card => {
         card.addEventListener('click', () => {
         play.flipCard(card);
-
         let audio = card.querySelector("audio");
         audio.play();
         audio.volume = 1; 
@@ -108,12 +162,15 @@ $('#start-game').click(function () {
 });
 
 var gameInPlay = true;
+var gameReset = false;
+var gameMoves = 0;
 
  //add constructor to handle the game https://www.w3schools.com/js/js_object_constructors.asp
 class remember {
     //Game content
     constructor(cards) {
-        this.cardArray = cards; 
+        this.cardArray = cards;
+        this.gameCount = document.getElementById('counter'); 
     }
 
      //Delay @ Start Game
@@ -121,6 +178,7 @@ class remember {
         this.cardToCheck = null;
         this.matchedCards = [];
         this.busy = true;
+                
         this.playMelody();
         setTimeout(() => {
             this.shuffle(this.cardArray);
@@ -136,7 +194,10 @@ class remember {
 
     //Flip function
     flipCard(card) {
-        if (this.canFlipCard(card)) { 
+        if (this.canFlipCard(card)) {
+            gameMoves++;
+            this.gameCount.innerText = gameMoves;
+ 
             card.classList.add('visible');
             if (this.cardToCheck) {
                 this.checkForCardMatch(card);
@@ -159,6 +220,7 @@ class remember {
     timerStart() {
     var remainingTime = 60;
     var elem = document.getElementById('time-to-go');
+    var elemWin = document.getElementById('winTime');
     var timer = setInterval(countdown, 1000);
     function countdown() {
       if (remainingTime <0) {
@@ -166,11 +228,14 @@ class remember {
         $('#game-finished').addClass('visible');
 
         } else if (gameInPlay == false) {
-            clearInterval(timer);
-            console.log(gameInPlay);
-        
+            clearInterval(timer);          
+
+         } else if (gameReset == true) {
+            clearTimeout(timer);          
+
         } else {
         elem.innerHTML = remainingTime;
+        elemWin.innerHTML = remainingTime;
         remainingTime--;
       }
     }
@@ -185,7 +250,10 @@ class remember {
 //animal clicked
     getCardType(card) {
                return card.getElementsByClassName('animal-img')[0].src;
+               
     }
+
+
 
 //match
     checkForCardMatch(card) {
@@ -220,8 +288,7 @@ class remember {
     //Score
     calculateScore() {  
             $("#game-score").each(function () {
-                console.log(this)
-                $(this).text(parseInt($(this).text(), 10) + 1);
+            $(this).text(parseInt($(this).text(), 10) + 1);
             });      
     }  
      

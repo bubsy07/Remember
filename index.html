@@ -95,6 +95,20 @@
             <i class="far fa-stop-circle" aria-hidden="true" id="melody-off"></i> 
             </div>
 
+
+            <!--  restart button -->
+        <div class="home game-area mx-auto">
+            Home
+            <i class="fas fa-home" aria-hidden="true" id="home"></i>
+        </div> 
+        
+            <!--  pause button -->
+        <div class="pause game-area mx-auto">
+        <i class="far fa-clock"></i>
+            <i class="far fa-pause-circle" aria-hidden="true" id="pause"></i>
+            <i class="fa fa-repeat" aria-hidden="true" id="resume"></i>
+        </div>
+
             <!-- Voice toggle -->
             <div class="voice-toggle game-area mx-auto">
             Speech 
@@ -218,7 +232,8 @@
     <div id="win" class="overlay-info mx-auto">
         <h1> Well Done</h1>
         <p>100 %</p>
-        <p>You Beat The Game</p> 
+        <p>You Beat The Game <br>
+        In <span id="counter">0</span> moves with <span id="winTime">0</span> seconds to go !!</p> 
         <div id="win-home"> 
         <p>Click to Return To Home Screen <i class="fas fa-home"></i></p>
         </div>

@@ -7,9 +7,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Lato&display=swap');
 
 body {
-   background-color: lightgreen;
+   background-color: lightgrey;
     margin: 3px;
-    color:blue;
+    color: grey;
     font-family: "Architects Daughter";}
 
 /*------Mouse Styling-*/
@@ -18,6 +18,9 @@ body {
 #rules-of-game,
 #win-home,
 #back-to-home,
+#home,
+#pause,
+#resume,
 #on,
 #off,
 #voice-on,
@@ -215,7 +218,7 @@ h1 {
 /*------Footer Styling-*/
 .footer-text {
     text-align: center;
-    color:blue;
+    color: grey;
     bottom: 0px;}
 
 /*-----Contact Form -*/
@@ -383,3 +386,11 @@ h1 {
 .voice-status {
     font-weight: 900;
     font-size: 2.25rem;}
+
+.pause {
+    text-align: center;
+    font-size: 1.75rem;}  
+
+.resume {
+    text-align: center;
+    font-size: 1.75rem;} 

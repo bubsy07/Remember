@@ -264,7 +264,6 @@ class remember {
         this.matchedCards.push(card_B);
         card_A.classList.add('matched');
         card_B.classList.add('matched');
-        this.calculateScore();
         if (this.matchedCards.length === this.cardArray.length)
             this.win();
     }
@@ -278,13 +277,6 @@ class remember {
             this.busy = false;
         }, 1750);
     }
-
-    //Score
-    calculateScore() {  
-            $("#game-score").each(function () {
-            $(this).text(parseInt($(this).text(), 10) + 1);
-            });      
-    }  
      
     //Plays Melody
     playMelody() {

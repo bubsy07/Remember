@@ -38,17 +38,22 @@ body {
     background-color: black;}
 
 .game-area {
-    font-size: 2rem;}
+    font-size: 2rem;
+    padding-top: 10px;
+    padding-bottom: 10px;}
 
 /*------Game display-*/
 .game-info-container {
+    background-color: floralwhite;
+    padding-top: 10px;
     grid-column: 1 / -1;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between;}
+            justify-content: space-between;
+    }
 
 /*------Grid display --*/
 .grid-container {
@@ -60,7 +65,7 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin: 0rem 1rem 1rem 1rem;
+    margin: 1rem 1rem 1rem 1rem;
     -webkit-perspective: 10rem;
             perspective: 10rem;
     -webkit-box-align: center;
@@ -102,7 +107,6 @@ body {
     position: relative;
     top: 540px;
     text-align: center;}      
-
 
 h1 {
     font-size: 600%;
@@ -238,32 +242,6 @@ h1 {
     bottom: 0px;
     background-color:black;}
 
-/*-----Contact Form -*/
-#contact{
-    position: relative;
-    text-align: center;
-    font-size: 3rem;
-    top: 130px;}
-
-#contact-form {
-    position: relative;
-    display: none;
-    text-align: center;
-    font-size: 1.625rem;
-    top: 130px;}
-
-/*-----Contact Form Response Messages-*/
-#mail-ok,
-#mail-nok {
-    display: none;}
-
-#mail-ok.visible,
-#mail-nok.visible {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    text-align: center;
-    font-size: 1.625rem;}
 
 .card-front {
     -webkit-transform: rotateY(180deg);
@@ -290,7 +268,7 @@ h1 {
         background-color: rgba(0, 0, 0, 0);   
     }
     to {
-        background-color: rgba(0, 0, 0, .8);   
+        background-color: rgba(0, 0, 0, .9);   
     }
 }
 @keyframes on-load {
@@ -298,7 +276,7 @@ h1 {
         background-color: rgba(0, 0, 0, 0);   
     }
     to {
-        background-color: rgba(0, 0, 0, .8);   
+        background-color: rgba(0, 0, 0, .9);   
     }
 }
 
@@ -387,22 +365,10 @@ h1 {
 }
 
 /*------Audio Toggle Styling-*/
-.audio-toggle {
+.audio {
     text-align: center;
     font-size: 1.75rem;}
 
-.audio-status {
-    font-weight: 900;
-    font-size: 2.5rem;}
-
-/*------voice Toggle Styling-*/
-.voice-toggle {
-    text-align: center;
-    font-size: 1.75rem;}
-
-.voice-status {
-    font-weight: 900;
-    font-size: 2.25rem;}
 
 .pause {
     text-align: center;

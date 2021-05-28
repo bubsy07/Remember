@@ -4,8 +4,6 @@
 window.onload = function() {  
     $('#voice-on').css('color', 'green');
     $('#melody-on').css('color', 'green');
-    $('#voice-off').css('color', 'red');
-    $('#melody-off').css('color', 'red');
     $("#resume").hide();
 }
 
@@ -50,7 +48,7 @@ $("#contact").mouseleave(function () {
 });
 
 $("#home").mouseenter(function () {
-    $(this).css('color', 'azure');
+    $(this).css('color', 'green');
 })
 
 $("#home").mouseleave(function () {
@@ -58,7 +56,7 @@ $("#home").mouseleave(function () {
 });
 
 $("#pause").mouseenter(function () {
-    $(this).css('color', 'azure');
+    $(this).css('color', 'green');
 })
 
 $("#pause").mouseleave(function () {
@@ -66,16 +64,12 @@ $("#pause").mouseleave(function () {
 });
 
 $("#resume").mouseenter(function () {
-    $(this).css('color', 'azure');
+    $(this).css('color', 'green');
 })
 
 $("#resume").mouseleave(function () {
     $(this).css('color', 'grey');
 });
-
-
-
-
 
 $(document).ready(function () {
     //Create Array of 'card'
@@ -137,15 +131,13 @@ $('#start-game').click(function () {
     jQuery('#voice-on').click(function () {
         $(this).css('color', 'green');
         jQuery('audio').prop("muted", false);
-        $('#voice-off').removeClass("voice-status");
-        $(this).addClass("voice-status");   
+        $('#voice-off').css('color', 'grey'); 
         });
 
     jQuery('#voice-off').click(function () {
          $(this).css('color', 'red');
         jQuery('audio').prop("muted", true);
-         $('#voice-on').removeClass("voice-status");
-         $(this).addClass("voice-status");
+         $('#voice-on').css('color', 'grey');
         });
 
       //Flip and say card animal
@@ -289,18 +281,17 @@ class remember {
         $('#melody-on').click(function () {
             $(this).css('color', 'green');
             $(melody).each(function () {
-                $(melody).prop('muted', false);    
-            });
-            $('#melody-off').removeClass("audio-status")
-            $(this).addClass("audio-status")
+            $(melody).prop('muted', false);
+            $('#melody-off').css('color', 'grey');
+            });  
         });
+
         $('#melody-off').click(function () {
             $(this).css('color', 'red');
             $(melody).each(function () {
-                $(melody).prop('muted', true);
-            });
-            $('#melody-on').removeClass("audio-status")
-            $(this).addClass("audio-status")
+            $(melody).prop('muted', true);
+            $('#melody-on').css('color', 'grey');
+            });    
         });
     }
 }    

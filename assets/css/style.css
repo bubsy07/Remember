@@ -148,6 +148,23 @@ h1 {
     position: relative;
     top: 20px;}
 
+   
+
+.logo1 {
+    width: 5%;
+    height: auto;
+    position: absolute;
+    left:20px;
+    top:20px;
+    float:left;}
+    
+.ica_logo {
+    width: 10%;
+    height: auto;
+    position: absolute;
+    right:20px;
+    top:20px;}
+
 #game-finished h1 {
     position: relative;
     text-align: center;

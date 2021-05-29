@@ -33,19 +33,20 @@ body {
     text-align: center;
     font-weight: normal;
     font-size: 4rem;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
     margin-bottom: 0px;
     background-color: black;}
 
 .game-area {
     font-size: 2rem;
-    padding-top: 10px;
-    padding-bottom: 10px;}
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;}
 
 /*------Game display-*/
 .game-info-container {
     background-color: floralwhite;
-    padding-top: 10px;
+    padding-top: 0px;
     grid-column: 1 / -1;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -59,13 +60,13 @@ body {
 .grid-container {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: auto 2.5rem auto 2.5rem auto 2.5rem auto;
+    -ms-grid-columns: auto 2rem auto 2rem auto 2rem auto;
     grid-template-columns: repeat(4, auto);
     grid-gap: 2.2rem;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin: 1rem 1rem 1rem 1rem;
+    margin: 2.9rem 1rem 2.9rem 1rem;
     -webkit-perspective: 10rem;
             perspective: 10rem;
     -webkit-box-align: center;
@@ -90,12 +91,13 @@ body {
 
 #front-page-text{
     position: relative;
-    top: 100px;}
+    top: 100px;
+    padding: 2px;}
 
 .front-email a, h4 {
     font-size: 1rem;
     position: relative;
-    top: 155px;}  
+    top: 105px;}  
     
 .win-email h4 {
     font-size: 1rem;
@@ -130,19 +132,21 @@ h1 {
     position: relative;
     text-align: center;
     font-size: 3rem;
-    top: 10px;}
+    top: 30px;}
 
 #what-to-do {
     position: relative;
     display: none;
     text-align: center;
     font-size: 1.625rem;
-    top: 10px;}
+    top: 30px;}
 
 #start-game {
     
     text-align: center;
-    font-size: 3rem;}
+    font-size: 3rem;
+    position: relative;
+    top: 20px;}
 
 #game-finished h1 {
     position: relative;
@@ -369,7 +373,6 @@ h1 {
     text-align: center;
     font-size: 1.75rem;}
 
-
 .pause {
     text-align: center;
     font-size: 1.75rem;}  
@@ -378,6 +381,7 @@ h1 {
     text-align: center;
     font-size: 1.75rem;} 
 
+/*------Title-*/
 .f {color: red;}
 .o1 {color: orangered;}
 .r {color: orange;}

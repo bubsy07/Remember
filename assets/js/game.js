@@ -84,6 +84,7 @@ $('#start-game').click(function () {
     $("#front-page").hide();
         
         play.startRemember();
+        play.timerStart();
     });
 
     //Rules of the game
@@ -172,7 +173,6 @@ class remember {
         setTimeout(() => {
             this.shuffle(this.cardArray);
             this.busy = false;
-            this.timerStart();  
         }, 750);
     }
  

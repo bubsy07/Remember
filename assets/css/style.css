@@ -148,8 +148,6 @@ h1 {
     position: relative;
     top: 20px;}
 
-   
-
 .logo1 {
     width: 5%;
     height: auto;
@@ -289,7 +287,7 @@ h1 {
         background-color: rgba(0, 0, 0, 0);   
     }
     to {
-        background-color: rgba(0, 0, 0, .9);   
+        background-color: rgba(0, 0, 0, 1);   
     }
 }
 @keyframes on-load {
@@ -297,7 +295,7 @@ h1 {
         background-color: rgba(0, 0, 0, 0);   
     }
     to {
-        background-color: rgba(0, 0, 0, .9);   
+        background-color: rgba(0, 0, 0, 1);   
     }
 }
 
@@ -306,7 +304,7 @@ h1 {
     .grid-container {
         -ms-grid-columns: auto;
         grid-template-columns: repeat(1, auto);
-        font-size: 1rem;
+        
        
     }
     .game-info-container {
@@ -324,7 +322,7 @@ h1 {
     .grid-container {
         -ms-grid-columns: auto 2.5rem auto;
         grid-template-columns: repeat(2, auto);
-        font-size: 1rem;      
+            
     }
     .game-info-container {
         -webkit-box-orient: vertical;
